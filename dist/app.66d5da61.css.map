@@ -1,0 +1,1 @@
+{"version":3,"sources":["scss/ieps_framework/modules/_init.scss"],"names":[],"mappings":"AAEA;EACI;;;AAGJ;EACI","file":"app.66d5da61.css","sourceRoot":"../src","sourcesContent":["//FICHIER D'INITIALISATION \n\n*{\n    box-sizing: border-box;\n}\n\nbody{\n    background: red;\n}"]}
