@@ -1,0 +1,27 @@
+// FICHIER DE SURCHARGE
+
+@import './ieps_framework/index.scss';
+
+
+
+body {
+    background: linear-gradient(to bottom,$color-1,10%,$color-2);
+}
+
+//MAIN HEADER
+.main-header{
+    
+    
+}
+
+//MAIN CONTENT 
+.main-content{
+    background: $color-neutral-4;
+    padding: 2em;
+    
+}
+
+//MAIN FOOTER
+.main-footer{
+
+}
