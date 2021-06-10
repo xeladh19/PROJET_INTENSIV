@@ -1,186 +1,205 @@
+/*
+  ./src/scss/ieps_framework/modules/_typography.scss
+  Module des typos
+ */
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 //----------------------------
 //TYPOGRAPHY VARIABLES
 //----------------------------
-    //PARAGRAPHES
-            $font-1:'Merriweather',Georgia,serif;
-            $font-color-default:$color-text;
-            $font-size-default:1.1em;
-            $font-weight-default:300;
-            $line-height-default:1.65;
-            
+//PARAGRAPHES
+$font-1: 'Merriweather', Georgia, serif;
+$font-color-default: $color-text;
+$font-size-default: 1em;
+$font-weight-default: 300;
+$line-height-default: 1.65;
 
-    //HEADERS
-            $font-2: 'Source Sans Pro',Helvetica,sans-serif;
+//HEADERS
+$font-2: 'Source Sans Pro', Helvetica, sans-serif;
 
-           
-        //H1 
-            $font-color-h1:$color-text;
-            $font-size-h1:2.5rem;
-            $font-weight-h1: 900;
-            $line-height-h1:1.2;
-            $margin-h1: 0 0 .7rem 0;
-            $letter-spacing-h1:-.025rem;
-            $text-transform-h1:uppercase;
-            
-        //H2
-            $font-color-h2:$color-text;
-            $font-size-h2:1.8rem;
-            $font-weight-h2: 900;
-            $line-height-h2:1.2;
-            $margin-h2: 0 0 .7rem 0;
-            $letter-spacing-h2:.04em;
-            $text-transform-h2:uppercase;
-        //H3
-            $font-color-h3:$color-text;
-            $font-size-h3:1.5rem;
-            $font-weight-h3: 900;
-            $line-height-h3:1.2;
-            $margin-h3: 0 0 .7rem 0;
-            $letter-spacing-h3:-.025rem;
-            $text-transform-h3:uppercase;
-        //H4
-            $font-color-h4:$color-text;
-            $font-size-h4:1.3rem;
-            $font-weight-h4: 900;
-            $line-height-h4:1.2;
-            $margin-h4: 0 0 .7rem 0;
-            $letter-spacing-h4:-.025rem;
-            $text-transform-h4:uppercase;
-        //H5
-            $font-color-h5:$color-text;
-            $font-size-h5:1.1rem;
-            $font-weight-h5: 900;
-            $line-height-h5:1.2;
-            $margin-h5: 0 0 .7rem 0;
-            $letter-spacing-h5:-.025rem;
-            $text-transform-h5:uppercase;
-        //H6 
-            $font-color-h6:$color-text;
-            $font-size-h6:1rem;
-            $font-weight-h6: 900;
-            $line-height-h6:1.2;
-            $margin-h6: 0 0 .7rem 0;
-            $letter-spacing-h6:-.025rem;
-            $text-transform-h6:uppercase;
+//H1
+$font-color-h1: $color-text;
+$font-size-h1: 4rem;
+$font-weight-h1: 900;
+$line-height-h1: 1.2;
+$margin-h1: 0 0 0.7rem 0;
+$letter-spacing-h1: -0.025rem;
+$text-transform-h1: uppercase;
 
-    //LINKS
-        $link-color: $color-text;
-        $link-decoration:underline dotted;
-        $link-hover-color:$color-text;
-        $link-hover-decoration:none;
+//H2
+$font-color-h2: $color-text;
+$font-size-h2: 1.75rem;
+$font-weight-h2: 900;
+$line-height-h2: 1.2;
+$margin-h2: 0 0 1rem 0;
+$letter-spacing-h2: 0.04em;
+$text-transform-h2: uppercase;
+//H3
+$font-color-h3: $color-text;
+$font-size-h3: 1.25rem;
+$font-weight-h3: 900;
+$line-height-h3: 1.2;
+$margin-h3: 0 0 0.7rem 0;
+$letter-spacing-h3: -0.025rem;
+$text-transform-h3: uppercase;
+//H4
+$font-color-h4: $color-text;
+$font-size-h4: 1rem;
+$font-weight-h4: 900;
+$line-height-h4: 1.2;
+$margin-h4: 0 0 0.7rem 0;
+$letter-spacing-h4: -0.025rem;
+$text-transform-h4: uppercase;
+//H5
+$font-color-h5: $color-text;
+$font-size-h5: 0.9rem;
+$font-weight-h5: 900;
+$line-height-h5: 1.2;
+$margin-h5: 0 0 0.7rem 0;
+$letter-spacing-h5: -0.025rem;
+$text-transform-h5: uppercase;
+//H6
+$font-color-h6: $color-text;
+$font-size-h6: 0.8rem;
+$font-weight-h6: 900;
+$line-height-h6: 1.2;
+$margin-h6: 0 0 0.7rem 0;
+$letter-spacing-h6: -0.025rem;
+$text-transform-h6: uppercase;
 
-    //CODE
-        $code-color:$color-text;
-        $code-background:$color-neutral-2;
-        $code-padding:.1em;
-        $code-border: $color-neutral-5 1px solid;
-    //HR
-        $hr-height: 1px;
-        $hr-color:$color-neutral-5;
-        $hr-margin:3rem 0;
-        $hr-border:solid;
-    //BLOCKQUOTE
+//LINKS
+$link-color: $color-text;
+$link-decoration: underline dotted;
+$link-hover-color: $color-text;
+$link-hover-decoration: none;
 
+//CODE
+$code-color: $color-text;
+$code-background: $color-neutral-2;
+$code-padding: 0.1em;
+$code-border: $color-neutral-5 1px solid;
 
+//HR
+
+$hr-margin: 3rem 0;
+$hr-border: 1px solid $color-neutral-5;
+
+// PRE
+$padding-pre: 1rem;
+$font-size-pre: 0.7rem;
+$font-weight-pre: 150;
+$border-pre: 2px solid $color-neutral-2;
+$color-pre: $color-text;
+$background-pre: $color-neutral-2;
 
 //----------------------------
 //DEFAULT SPECIFICATIONS
 //----------------------------
-        body{
-            font-family: $font-1;
-            font-size: $font-size-default;
-            font-weight: $font-weight-default;
-            line-height: $line-height-default;
-            color:$font-color-default;
-        }
+body {
+    font-family: $font-1;
+    font-size: $font-size-default;
+    font-weight: $font-weight-default;
+    line-height: $line-height-default;
+    color: $font-color-default;
+}
 //LINKS
-        a{
-            color:$link-color;
-            text-decoration: $link-decoration;
-            &:hover{
-                color:$link-hover-color;
-                text-decoration: $link-hover-decoration;
-            }
-        }
+a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+}
 //HR
-        hr{
-            height:$hr-height ;
-            color:$hr-color ;
-            margin:$hr-margin ;
-            border: $hr-border;
-        }
+hr {
+    margin: $hr-margin;
+    border: $hr-border;
+}
 //CODE
-        code{
-            color:$code-color;
-            background:$code-background;
-            padding:$code-padding;
-            border:$code-border;
-            
-        }
+code {
+    color: $code-color;
+    background: $code-background;
+    padding: $code-padding;
+    border: $code-border;
+}
 //HEADERS
-        
-        h1, 
-        .h1 {
-            font-family: $font-2;
-            color: $font-color-h1;
-            font-size: $font-size-h1;
-            font-weight: $font-weight-h1;
-            line-height: $line-height-h1;
-            margin: $margin-h1;
-            letter-spacing: $letter-spacing-h1;
-            text-transform: $text-transform-h1;
-            }
-        h2, 
-        .h2 {
-            font-family: $font-2;
-            color: $font-color-h2;
-            font-size: $font-size-h2;
-            font-weight: $font-weight-h2;
-            line-height: $line-height-h2;
-            margin: $margin-h2;
-            letter-spacing: $letter-spacing-h2;
-            text-transform: $text-transform-h2;
-        }
-        h3, .h3 {
-            font-family: $font-2;
-            color: $font-color-h3;
-            font-size: $font-size-h3;
-            font-weight: $font-weight-h3;
-            line-height: $line-height-h3;
-            margin: $margin-h3;
-            letter-spacing: $letter-spacing-h3;
-            text-transform: $text-transform-h3;
-            }
 
-        h4, .h4 {
-            font-family: $font-2;
-            color: $font-color-h4;
-            font-size: $font-size-h4;
-            font-weight: $font-weight-h4;
-            line-height: $line-height-h4;
-            margin: $margin-h4;
-            letter-spacing: $letter-spacing-h4;
-            text-transform: $text-transform-h4;
-        }
-        h5, .h5 {
-            font-family: $font-2;
-            color: $font-color-h5;
-            font-size: $font-size-h5;
-            font-weight: $font-weight-h5;
-            line-height: $line-height-h5;
-            margin: $margin-h5;
-            letter-spacing: $letter-spacing-h5;
-            text-transform: $text-transform-h5;
-            }
-            
-        h6, .h6 {
-            font-family: $font-2;
-            color: $font-color-h6;
-            font-size: $font-size-h6;
-            font-weight: $font-weight-h6;
-            line-height: $line-height-h6;
-            margin: $margin-h6;
-            letter-spacing: $letter-spacing-h6;
-            text-transform: $text-transform-h6;
-            }
+h1,
+.h1 {
+    font-family: $font-2;
+    color: $font-color-h1;
+    font-size: $font-size-h1;
+    font-weight: $font-weight-h1;
+    line-height: $line-height-h1;
+    margin: $margin-h1;
+    letter-spacing: $letter-spacing-h1;
+    text-transform: $text-transform-h1;
+}
+h2,
+.h2 {
+    font-family: $font-2;
+    color: $font-color-h2;
+    font-size: $font-size-h2;
+    font-weight: $font-weight-h2;
+    line-height: $line-height-h2;
+    margin: $margin-h2;
+    letter-spacing: $letter-spacing-h2;
+    text-transform: $text-transform-h2;
+}
+h3,
+.h3 {
+    font-family: $font-2;
+    color: $font-color-h3;
+    font-size: $font-size-h3;
+    font-weight: $font-weight-h3;
+    line-height: $line-height-h3;
+    margin: $margin-h3;
+    letter-spacing: $letter-spacing-h3;
+    text-transform: $text-transform-h3;
+}
+
+h4,
+.h4 {
+    font-family: $font-2;
+    color: $font-color-h4;
+    font-size: $font-size-h4;
+    font-weight: $font-weight-h4;
+    line-height: $line-height-h4;
+    margin: $margin-h4;
+    letter-spacing: $letter-spacing-h4;
+    text-transform: $text-transform-h4;
+}
+h5,
+.h5 {
+    font-family: $font-2;
+    color: $font-color-h5;
+    font-size: $font-size-h5;
+    font-weight: $font-weight-h5;
+    line-height: $line-height-h5;
+    margin: $margin-h5;
+    letter-spacing: $letter-spacing-h5;
+    text-transform: $text-transform-h5;
+}
+
+h6,
+.h6 {
+    font-family: $font-2;
+    color: $font-color-h6;
+    font-size: $font-size-h6;
+    font-weight: $font-weight-h6;
+    line-height: $line-height-h6;
+    margin: $margin-h6;
+    letter-spacing: $letter-spacing-h6;
+    text-transform: $text-transform-h6;
+}
+
+//PRE
+pre {
+    padding: $padding-pre;
+    font-size: $font-size-pre;
+    font-weight: $font-weight-pre;
+    border: $border-pre;
+    color: $color-pre;
+    background: $background-pre;
+}

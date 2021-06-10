@@ -1,17 +1,22 @@
-
-
+/*
+  ./src/scss/ieps_framework/modules/_colors.scss
+  Module des colors 
+ */
 
 //----------------------------
 //COLORS VARIABLES
 //----------------------------
-$color-1:#4E403D;
-$color-2:#212931;
-$color-text:#212931;
-$color-neutral-1:#18BFEF;
-$color-neutral-2:#F6F6F6;
-$color-neutral-3:#717981;
-$color-neutral-4:rgb(255,255,255);
-$color-neutral-5:darken($color-neutral-4, 7%);
+$color-1: #4e403d;
+$color-2: #212931;
+$color-text: $color-2;
+$color-neutral-1: #18bfef;
+$color-neutral-2: #f6f6f6;
+$color-neutral-3: #717981;
+$color-neutral-4: rgb(255, 255, 255);
+$color-neutral-5: darken($color-neutral-4, 7%);
+$color-neutral-6: rgb(247, 247, 247);
+$colorLess: $color-neutral-4;
+$colorHover: $color-neutral-1;
 
 //----------------------------
 //COLOR DIMENSION
@@ -21,34 +26,29 @@ $color-block-dim: 120px;
 //----------------------------
 //COLORS BLOCKS
 //----------------------------
-.color-block{
-    width:$color-block-dim;
-    height:$color-block-dim;
+.color-block {
+    width: $color-block-dim;
+    height: $color-block-dim;
     display: inline-block;
-    color:$color-neutral-2;
+    color: #f1f1f1;
 
-    
-    &.color-neutral-1{
+    &.color-neutral-1 {
         background: $color-neutral-1;
     }
-    &.color-neutral-2{
+    &.color-neutral-2 {
         background: $color-neutral-2;
     }
-    &.color-neutral-3{
+    &.color-neutral-3 {
         background: $color-neutral-3;
     }
-    &.color-1{
+    &.color-1 {
         background: $color-1;
     }
-    &.color-2{
+    &.color-2 {
         background: $color-2;
     }
-    
 
-    &.text-block{
-        line-height: $color-block-dim; 
-
+    &.text-block {
+        line-height: $color-block-dim;
     }
 }
-
-

@@ -1,0 +1,113 @@
+/*
+  ./src/scss/ieps_framework/modules/_buttons.scss
+  Module des buttons
+ */
+
+//----------------------------
+//BUTTONS VARIABLES
+//----------------------------
+
+//BTN-
+$display-btn: inline-block;
+
+$border-btn: 3px solid $color-2;
+$border-btn-hover: 3px solid $colorHover;
+
+$background-btn: $color-2;
+$background-btn-hover: $colorHover;
+
+$color-btn: $color-neutral-4;
+$color-btn-less: $color-2;
+$color-btn-hover: $colorHover;
+
+//FONT
+$font-size-btn: 0.7rem;
+$font-weight-btn: 900;
+$font-family-btn: $font-2;
+//TEXT
+$letter-spacing-btn: 0.05rem;
+$text-decoration-btn: none;
+$text-transform-btn: uppercase;
+//POSITION
+$padding-btn: 0.5rem 1.9rem;
+$margin-btn: 0 1.5rem 1.5rem 0;
+
+// |||||||||||||||||||||||||||
+
+//BTN SMALL
+$padding-btn-small: 0.3rem 1rem;
+
+//BTN DEFAULT
+$padding-btn-default: $padding-btn;
+
+//BTN LARGE
+$padding-btn-large: 0.75rem 3.2rem;
+
+//BTN FIT (+SMALL)
+$font-size-fs-btn: 0.5rem;
+
+//BTN ICON
+
+//BTN + FILTRE
+$opacity-btn: 0.2;
+
+//BTN LESS
+$background-btn-less: $colorLess;
+
+//BTN ALIGNES
+$display-btn-div: flex;
+$align-items-btn-div: flex-start;
+
+//----------------------------
+//BUTTONS SPECIFICATIONS
+//----------------------------
+.inline {
+    display: $display-btn-div;
+    align-items: $align-items-btn-div;
+    list-style: none;
+    padding: 0;
+}
+button,
+.btn {
+    display: $display-btn;
+    font-size: $font-size-btn;
+    font-weight: $font-weight-btn;
+    font-family: $font-family-btn;
+    padding: $padding-btn;
+    border: $border-btn;
+    letter-spacing: $letter-spacing-btn;
+    text-decoration: $text-decoration-btn;
+    text-transform: $text-transform-btn;
+    margin: $margin-btn;
+    background: $background-btn;
+    color: $color-btn;
+
+    &:hover {
+        border: $border-btn-hover;
+        color: $color-neutral-4;
+        background: $background-btn-hover;
+    }
+    &.small {
+        padding: $padding-btn-small;
+    }
+
+    &.large {
+        padding: $padding-btn-large;
+    }
+    &.fit {
+        font-size: $font-size-fs-btn;
+    }
+    &.icon {
+    }
+    &.less {
+        background: $background-btn-less;
+        color: $color-btn-less;
+        &:hover {
+            border: $border-btn-hover;
+            color: $colorHover;
+        }
+    }
+    &.opacity {
+        opacity: $opacity-btn;
+    }
+}

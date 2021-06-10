@@ -1,0 +1,23 @@
+/*
+  ./src/scss/ieps_framework/modules/_blockquote.scss
+  Module du blockquote
+ */
+
+//----------------------------
+//BLOCKQUOTE VARIABLES
+//----------------------------
+
+//BLOCKQUOTE
+$font-style-blockquote: italic;
+$border-left-blockquote: 3px solid $color-neutral-5;
+
+//----------------------------
+//DEFAULT SPECIFICATIONS
+//----------------------------
+
+//BLOCKQUOTE
+blockquote,
+.blockquote {
+    font-style: $font-style-blockquote;
+    border-left: $border-left-blockquote;
+}

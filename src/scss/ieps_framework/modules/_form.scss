@@ -1,0 +1,59 @@
+/*
+  ./src/scss/ieps_framework/modules/_forms.scss
+  Module des formulaires
+ */
+
+//----------------------------
+//FORM VARIABLES
+//----------------------------
+
+//FORM
+$width-form: 100%;
+$padding-form: 0.7rem;
+$color-form: $color-text;
+$border-form: 2px solid $color-neutral-5;
+
+//TYPE RADIO
+$margin-top-radio: 2rem;
+$margin-right-radio: 1rem;
+//TYPE CHECKBOX
+$margin-top-checkbox: 2rem;
+$margin-right-checkbox: 1rem;
+
+$row-gap: 0;
+$column-gap: 0;
+//----------------------------
+//FORM SPECIFICATIONS
+//----------------------------
+
+.form {
+    padding-top: 1.5rem;
+    list-style: none;
+}
+.validate {
+    width: $width-form;
+    padding: $padding-form;
+    color: $color-form;
+    border: $border-form;
+}
+
+.radio {
+    margin-top: $margin-top-radio;
+    margin-right: $margin-right-radio;
+    width: 25px;
+    height: 25px;
+}
+
+.checkbox {
+    margin-top: $margin-top-checkbox;
+    margin-right: $margin-right-checkbox;
+    width: 25px;
+    height: 25px;
+}
+
+.selected {
+    width: 100%;
+    padding: 0.7rem;
+    color: $color-text;
+    border: 2px solid $color-neutral-5;
+}

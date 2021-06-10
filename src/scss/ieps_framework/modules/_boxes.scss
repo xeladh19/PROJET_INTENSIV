@@ -1,18 +1,23 @@
-//DEFINITION DE L'ETIQUETTE CONTAINER
+/*
+  ./src/scss/ieps_framework/modules/_boxes.scss
+  Module des boxes
+ */
 
+//DEFINITION DE L'ETIQUETTE CONTAINER
 
 //BOUCLE DES MEDIAS QUERIES
 @use "sass:map";
 
-@each $size, $values in $screen-sizes{
-    @media screen and (min-width: map-get($values, 'breakpoint')) {
-        .container {
-                width: 100%;
-                max-width: map-get($values,'container-size');
-                margin: auto;
-        }
-    }
-}
+// @each $size, $values in $screen-sizes {
+//     @media screen and (min-width: map-get($values, 'breakpoint')) {
+//         .container {
+//             width: 100%;
+//             max-width: map-get($values, 'container-size');
+//             margin: auto;
+//         }
+//     }
+// }
+$gridValues: (('', 0, auto), ('-sm', 576px, 540px), ('-md', 768px, 720px), ('-lg', 992px, 960px), ('-xl', 1200px, 1140px), ('-xxl', 1400px, 1320px));
 
 //-------------------------------
 //CONTENT ALIGNMENTS
@@ -30,7 +35,78 @@
     text-align: right;
 }
 
-.text-justify{
+.text-justify {
     text-align: justify;
 }
 
+//-------------------------------
+//FLOAT ALIGNMENTS
+//-------------------------------
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+//-------------------------------
+//BOX SPECIFICATIONS
+//-------------------------------
+.box {
+    font-weight: 200;
+    border: 2px solid $color-neutral-5;
+    padding: 1rem;
+    line-height: 2rem;
+}
+
+// -------------------------------------------------------------------
+// DISPLAY
+// -------------------------------------------------------------------
+
+/* Valeurs de type <display-outside> */
+.display {
+    &.-block {
+        display: block;
+    }
+    &.-inline {
+        display: inline;
+    }
+    /* Valeurs de type <display-inside> */
+    &.-flex {
+        display: flex;
+    }
+    &.-grid {
+        display: grid;
+    }
+    /* Valeurs de type <display-box> */
+    &.-none {
+        display: none;
+    }
+    /* Valeurs de type <display-legacy> */
+    &.-inline-block {
+        display: inline-block;
+    }
+}
+//-------------------------------
+//JUSTIFY ALIGNMENTS
+//-------------------------------
+
+.justify {
+    &.center {
+        justify-content: center;
+    }
+
+    &.space-between {
+        justify-content: space-between;
+    }
+
+    &.space-around {
+        justify-content: space-around;
+    }
+
+    &.space-evenly {
+        justify-content: space-evenly;
+    }
+}

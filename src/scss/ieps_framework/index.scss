@@ -1,7 +1,19 @@
- //FICHIER DE DEPART DU FRAMEWORK
+/*
+  ./src/scss/ieps_framework/index.scss
  
- @import './modules/init';
- @import './modules/colors';
- @import './modules/typography';
- @import './modules/boxes';
- @import './modules/lists';
+ */
+
+//FICHIER DE DEPART DU FRAMEWORK
+
+@import './modules/init';
+@import './modules/grid';
+@import './modules/colors';
+@import './modules/typography';
+@import './modules/subtitles';
+@import './modules/boxes';
+@import './modules/lists';
+@import './modules/blockquote';
+@import './modules/tables';
+@import './modules/buttons';
+@import './modules/form';
+@import './modules/nav';

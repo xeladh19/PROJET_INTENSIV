@@ -1,25 +1,45 @@
+/*
+  ./src/scss/app.scss
+
+ */
+/*
+  ./src/scss/ieps_framework/index.scss
+
+ */
+/*
+  ./src/scss/ieps_framework/modules/_init.scss
+  Module du init
+ */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 * {
   box-sizing: border-box;
 }
 
+/*
+  ./src/scss/ieps_framework/modules/_grid.scss
+  Module du grid
+ */
+/*
+  ./src/scss/ieps_framework/modules/_colors.scss
+  Module des colors 
+ */
 .color-block {
   width: 120px;
   height: 120px;
   display: inline-block;
-  color: #F6F6F6;
+  color: #f1f1f1;
 }
 .color-block.color-neutral-1 {
-  background: #18BFEF;
+  background: #18bfef;
 }
 .color-block.color-neutral-2 {
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 .color-block.color-neutral-3 {
   background: #717981;
 }
 .color-block.color-1 {
-  background: #4E403D;
+  background: #4e403d;
 }
 .color-block.color-2 {
   background: #212931;
@@ -28,9 +48,13 @@
   line-height: 120px;
 }
 
+/*
+  ./src/scss/ieps_framework/modules/_typography.scss
+  Module des typos
+ */
 body {
   font-family: "Merriweather", Georgia, serif;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 300;
   line-height: 1.65;
   color: #212931;
@@ -46,15 +70,13 @@ a:hover {
 }
 
 hr {
-  height: 1px;
-  color: #ededed;
   margin: 3rem 0;
-  border: solid;
+  border: 1px solid #ededed;
 }
 
 code {
   color: #212931;
-  background: #F6F6F6;
+  background: #f6f6f6;
   padding: 0.1em;
   border: #ededed 1px solid;
 }
@@ -63,7 +85,7 @@ h1,
 .h1 {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   color: #212931;
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: 900;
   line-height: 1.2;
   margin: 0 0 0.7rem 0;
@@ -75,18 +97,19 @@ h2,
 .h2 {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   color: #212931;
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   font-weight: 900;
   line-height: 1.2;
-  margin: 0 0 0.7rem 0;
+  margin: 0 0 1rem 0;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   color: #212931;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 900;
   line-height: 1.2;
   margin: 0 0 0.7rem 0;
@@ -94,29 +117,8 @@ h3, .h3 {
   text-transform: uppercase;
 }
 
-h4, .h4 {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  color: #212931;
-  font-size: 1.3rem;
-  font-weight: 900;
-  line-height: 1.2;
-  margin: 0 0 0.7rem 0;
-  letter-spacing: -0.025rem;
-  text-transform: uppercase;
-}
-
-h5, .h5 {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  color: #212931;
-  font-size: 1.1rem;
-  font-weight: 900;
-  line-height: 1.2;
-  margin: 0 0 0.7rem 0;
-  letter-spacing: -0.025rem;
-  text-transform: uppercase;
-}
-
-h6, .h6 {
+h4,
+.h4 {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   color: #212931;
   font-size: 1rem;
@@ -127,41 +129,81 @@ h6, .h6 {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 0) {
-  .container {
-    width: 100%;
-    max-width: auto;
-    margin: auto;
-  }
+h5,
+.h5 {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #212931;
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0 0 0.7rem 0;
+  letter-spacing: -0.025rem;
+  text-transform: uppercase;
 }
-@media screen and (min-width: 576px) {
-  .container {
-    width: 100%;
-    max-width: 540px;
-    margin: auto;
-  }
+
+h6,
+.h6 {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #212931;
+  font-size: 0.8rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0 0 0.7rem 0;
+  letter-spacing: -0.025rem;
+  text-transform: uppercase;
 }
-@media screen and (min-width: 768px) {
-  .container {
-    width: 100%;
-    max-width: 720px;
-    margin: auto;
-  }
+
+pre {
+  padding: 1rem;
+  font-size: 0.7rem;
+  font-weight: 150;
+  border: 2px solid #f6f6f6;
+  color: #212931;
+  background: #f6f6f6;
 }
-@media screen and (min-width: 960px) {
-  .container {
-    width: 100%;
-    max-width: 960px;
-    margin: auto;
-  }
+
+/*
+  ./src/scss/ieps_framework/modules/_subtitles.scss
+  Module des subtitles
+ */
+.title-sub1 {
+  font-size: 1.75rem;
 }
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 100%;
-    max-width: 1140px;
-    margin: auto;
-  }
+
+.title-sub2 {
+  font-size: 1.25rem;
 }
+
+.title-sub3 {
+  font-size: 1rem;
+}
+
+.sub1 {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0 0 2.5rem 0;
+}
+
+.sub2 {
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 0 0 2.5rem 0;
+}
+
+.sub3 {
+  font-size: 0.7rem;
+  font-style: italic;
+  margin: 0 0 2.5rem 0;
+}
+
+.para {
+  line-height: 2rem;
+}
+
+/*
+  ./src/scss/ieps_framework/modules/_boxes.scss
+  Module des boxes
+ */
 .text-center {
   text-align: center;
 }
@@ -178,6 +220,63 @@ h6, .h6 {
   text-align: justify;
 }
 
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.box {
+  font-weight: 200;
+  border: 2px solid #ededed;
+  padding: 1rem;
+  line-height: 2rem;
+}
+
+/* Valeurs de type <display-outside> */
+.display {
+  /* Valeurs de type <display-inside> */
+  /* Valeurs de type <display-box> */
+  /* Valeurs de type <display-legacy> */
+}
+.display.-block {
+  display: block;
+}
+.display.-inline {
+  display: inline;
+}
+.display.-flex {
+  display: flex;
+}
+.display.-grid {
+  display: grid;
+}
+.display.-none {
+  display: none;
+}
+.display.-inline-block {
+  display: inline-block;
+}
+
+.justify.center {
+  justify-content: center;
+}
+.justify.space-between {
+  justify-content: space-between;
+}
+.justify.space-around {
+  justify-content: space-around;
+}
+.justify.space-evenly {
+  justify-content: space-evenly;
+}
+
+/*
+  ./src/scss/ieps_framework/modules/_lists.scss
+  Module des lists
+ */
 .blockquote {
   font-style: italic;
   margin: 2rem 0;
@@ -187,24 +286,12 @@ h6, .h6 {
 }
 
 .definition {
-  margin: 2rem 0;
+  list-style: none;
   padding: 0;
+  margin: 1em 0;
 }
-.definition > p {
-  line-height: 2.5rem;
-  margin: 0 2.5rem;
-  padding: 1rem 0;
-}
-
-.list {
-  padding-left: 20%;
-  margin: 2rem 0;
-}
-.list li {
-  margin: 0.5em 0;
-}
-.list h3 {
-  margin: 2rem 0;
+.definition .text-definition {
+  margin-left: 2rem;
 }
 
 .list-unordered li {
@@ -219,33 +306,314 @@ h6, .h6 {
   margin: 0.75rem 0;
 }
 
-.list-icon li {
-  margin: 0 0 0 2rem;
-}
-.list-icon li.circle {
-  text-align: center;
-  width: 24px;
-  height: 24px;
-  border: 2px solid #ededed;
-  border-radius: 50px;
-}
-.list-icon li.circle img {
-  width: 10px;
-  height: 10px;
-}
-.list-icon ul {
+.list-icon {
   display: flex;
   flex-direction: row;
+  padding-left: 0;
+  margin: 2rem 0;
+  list-style: none;
+}
+.list-icon li {
+  margin: 0 0.5em;
+}
+.list-icon li:last-of-type {
+  padding: 0 1rem 0 0;
+}
+.list-icon .icon:hover {
+  color: #18bfef;
+}
+
+/*
+  ./src/scss/ieps_framework/modules/_blockquote.scss
+  Module du blockquote
+ */
+blockquote,
+.blockquote {
+  font-style: italic;
+  border-left: 3px solid #ededed;
+}
+
+/*
+  ./src/scss/ieps_framework/modules/_tables.scss
+  Module des tables 
+ */
+table {
+  border-spacing: 0;
+  margin: 1rem 0 3rem 0;
+  font-size: 1rem;
+  text-align: left;
+  width: 100%;
+}
+table caption {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+table thead {
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 0.8rem;
+}
+table thead th {
+  padding-left: 0.5rem;
+}
+table tbody.alternate {
+  text-align: left;
+}
+table tbody.alternate td {
+  border: 0.5px solid #ededed;
+}
+table tbody.alternate tr > * {
+  padding-left: 0.5rem;
+}
+table tbody.alternate tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+table tbody.alternate th {
+  font-weight: 300;
+  border: 0.5px solid #ededed;
+}
+table tbody.default {
+  text-align: left;
+  border-top: 3px solid blue;
+}
+table tbody.default tr > * {
+  border-top: 1px solid #f7f7f7;
+  padding-left: 0.5rem;
+}
+table tbody.default tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+table tbody.default th {
+  font-weight: 300;
+}
+
+tfoot td {
+  padding-left: 0.5rem;
+}
+
+/*
+  ./src/scss/ieps_framework/modules/_buttons.scss
+  Module des buttons
+ */
+.inline {
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+}
+
+button,
+.btn {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 900;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  padding: 0.5rem 1.9rem;
+  border: 3px solid #212931;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 1.5rem 1.5rem 0;
+  background: #212931;
+  color: white;
+}
+button:hover,
+.btn:hover {
+  border: 3px solid #18bfef;
+  color: white;
+  background: #18bfef;
+}
+button.small,
+.btn.small {
+  padding: 0.3rem 1rem;
+}
+button.large,
+.btn.large {
+  padding: 0.75rem 3.2rem;
+}
+button.fit,
+.btn.fit {
+  font-size: 0.5rem;
+}
+button.less,
+.btn.less {
+  background: white;
+  color: #212931;
+}
+button.less:hover,
+.btn.less:hover {
+  border: 3px solid #18bfef;
+  color: #18bfef;
+}
+button.opacity,
+.btn.opacity {
+  opacity: 0.2;
+}
+
+/*
+  ./src/scss/ieps_framework/modules/_forms.scss
+  Module des formulaires
+ */
+.form {
+  padding-top: 1.5rem;
   list-style: none;
 }
 
+.validate {
+  width: 100%;
+  padding: 0.7rem;
+  color: #212931;
+  border: 2px solid #ededed;
+}
+
+.radio {
+  margin-top: 2rem;
+  margin-right: 1rem;
+  width: 25px;
+  height: 25px;
+}
+
+.checkbox {
+  margin-top: 2rem;
+  margin-right: 1rem;
+  width: 25px;
+  height: 25px;
+}
+
+.selected {
+  width: 100%;
+  padding: 0.7rem;
+  color: #212931;
+  border: 2px solid #ededed;
+}
+
+/*
+  ./src/scss/ieps_framework/modules/_nav.scss
+  Module du nav
+ */
+.ul-nav {
+  display: flex;
+  list-style: none;
+}
+
+nav,
+.nav-content {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+}
+nav ul,
+.nav-content ul {
+  margin: 0;
+  padding: 0;
+}
+nav .nav-link,
+.nav-content .nav-link {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 900;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+}
+nav .nav-link:hover,
+.nav-content .nav-link:hover {
+  background: white;
+  color: #212931;
+}
+nav .nav-link.isActive,
+.nav-content .nav-link.isActive {
+  background: white;
+  color: #212931;
+}
+
+.nav-icon {
+  color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  padding: 0 0.1rem;
+}
+.nav-icon:hover {
+  color: #18bfef;
+}
+
+.align {
+  align-items: center;
+}
+
 body {
-  background: linear-gradient(to bottom, #4E403D, 10%, #212931);
+  background: radial-gradient(at top, #4e403d 10px, #212931 60%);
+}
+
+.main-header a {
+  color: white;
+}
+.main-header nav {
+  background: rgba(255, 255, 255, 0.1);
+}
+.main-header.logo-link {
+  text-decoration: none;
+  display: block;
+  width: 200px;
+  border: 4px solid white;
+  margin: auto;
+  padding: 0.5rem;
+  margin: 4rem auto 2rem auto;
 }
 
 .main-content {
   background: white;
-  padding: 2em;
+  padding: 8rem 8rem 6rem 8rem;
+}
+
+.copyright {
+  color: #717981;
+  margin: 2rem 0 5rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+.copyright span {
+  margin: 0.5rem;
+}
+.copyright a {
+  color: #717981;
+}
+.copyright a:hover {
+  color: white;
+}
+
+img.float-left {
+  width: 210px;
+  margin: 0.75rem 1rem 0;
+}
+img.float-right {
+  width: 210px;
+  margin: 1.2rem 0 0 1rem;
+}
+
+.text-image {
+  margin-top: 2rem;
+}
+
+.footer-content {
+  background: #f6f6f6;
+  flex-direction: column;
+  display: flex;
+}
+.footer-content form {
+  border-right: 2px solid red;
+}
+.footer-content a {
+  text-decoration: none;
+}
+.footer-content address {
+  border-bottom: 2px solid blue;
+}
+.footer-content h4 {
+  color: #717981;
 }
 
 /*# sourceMappingURL=/app.66d5da61.css.map */

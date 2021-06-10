@@ -1,0 +1,92 @@
+/*
+  ./src/scss/ieps_framework/modules/_nav.scss
+  Module du nav
+ */
+
+//----------------------------
+//NAV VARIABLES
+//----------------------------
+
+//BLOCK GENERAL NAV
+// $background-nav: $color-neutral-3;
+$font-family-nav: $font-2;
+
+//ELEMENTS NAV
+$display-nav-link: block;
+$margin-ul-link: 0;
+$padding-ul-link: 0;
+$list-style-ul-nav: none;
+$display-ul-nav: flex;
+//LINK
+$font-size-link: 0.8rem;
+$font-weight-link: 900;
+$padding-link: 1rem 1rem;
+
+$letter-spacing-link: 0.1rem;
+
+//TEXT
+$text-transform-link: uppercase;
+$text-decoration-link: none;
+$color-li: $color-neutral-4;
+
+//HOVER
+$background-link-hover: $color-neutral-4;
+$color-link-hover: $color-text;
+$color-hover-icon: $colorHover;
+//ICON
+$color-icon: $color-neutral-2;
+$display-icon: flex;
+$justify-content-icon: center;
+$align-icon: center;
+
+//----------------------------
+//NAV SPECIFICATIONS
+//----------------------------
+
+.ul-nav {
+    display: $display-ul-nav;
+    list-style: $list-style-ul-nav;
+}
+
+nav,
+.nav-content {
+    // background: $background-nav;
+    font-family: $font-family-nav;
+
+    ul {
+        margin: $margin-ul-link;
+        padding: $padding-ul-link;
+    }
+    .nav-link {
+        display: $display-nav-link;
+        font-size: 0.7rem;
+        font-weight: $font-weight-link;
+        padding: $padding-link;
+        text-transform: $text-transform-link;
+        text-decoration: $text-decoration-link;
+        letter-spacing: $letter-spacing-link;
+
+        &:hover {
+            background: $background-link-hover;
+            color: $color-link-hover;
+        }
+        &.isActive {
+            background: $color-neutral-4;
+            color: $color-2;
+        }
+    }
+}
+.nav-icon {
+    color: $color-icon;
+    display: $display-icon;
+    justify-content: $justify-content-icon;
+    padding: 0 0.1rem;
+
+    &:hover {
+        color: $color-hover-icon;
+    }
+}
+
+.align {
+    align-items: $align-icon;
+}

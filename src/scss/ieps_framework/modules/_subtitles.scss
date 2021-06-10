@@ -1,0 +1,62 @@
+/*
+  ./src/scss/ieps_framework/modules/_subtitles.scss
+  Module des subtitles
+ */
+
+//----------------------------
+//SUBTITLES VARIABLES
+//----------------------------
+
+//FONT SIZE SUB
+$font-size-title-sub1: $font-size-h2;
+$font-size-title-sub2: $font-size-h3;
+$font-size-title-sub3: $font-size-h4;
+
+$font-size-sub1: 1rem;
+$font-size-sub2: 0.85rem;
+$font-size-sub3: 0.7rem;
+//FONT STYLE SUB
+$font-style-sub1: italic;
+$font-style-sub2: italic;
+$font-style-sub3: italic;
+//MARGIN SUB
+$margin-content-sub1: 0 0 2.5rem 0;
+$margin-content-sub2: 0 0 2.5rem 0;
+$margin-content-sub3: 0 0 2.5rem 0;
+
+//PARAGRAPHE
+$line-height-p: 2rem;
+
+//----------------------------
+//SUBTITLES SPECIFICATIONS
+//----------------------------
+
+//TITLE SUB
+.title-sub1 {
+    font-size: $font-size-title-sub1;
+}
+.title-sub2 {
+    font-size: $font-size-title-sub2;
+}
+.title-sub3 {
+    font-size: $font-size-title-sub3;
+}
+//SUB
+.sub1 {
+    font-size: $font-size-sub1;
+    font-style: $font-style-sub1;
+    margin: $margin-content-sub1;
+}
+.sub2 {
+    font-size: $font-size-sub2;
+    font-style: $font-style-sub2;
+    margin: $margin-content-sub2;
+}
+.sub3 {
+    font-size: $font-size-sub3;
+    font-style: $font-style-sub3;
+    margin: $margin-content-sub3;
+}
+.para {
+    line-height: $line-height-p;
+}

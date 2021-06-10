@@ -1,137 +1,145 @@
+/*
+  ./src/scss/ieps_framework/modules/_lists.scss
+  Module des lists
+ */
+
 //----------------------------
 //LISTS VARIABLES
 //----------------------------
 
-$margin-list:2rem 0;
+$margin-list: 2rem 0;
 $padding-list: 20%;
-$margin-list-li: .5em 0;
-
-
+$margin-list-li: 0.5em 0;
 
 //UNORDERED - UL
 // $padding-list-unordered:20%;
-$margin-list-unordered-li:.75rem 0;
-
-
+$margin-list-unordered-li: 0.75rem 0;
 
 //ORDERED
 // $padding-list-ordered:20%;
-$margin-list-ordered-li:.75rem 0;
-
-
+$margin-list-ordered-li: 0.75rem 0;
 
 //ALTERNATE - UL.ALTERNATE
 // $padding-list-alternate:1em;
-$margin-list-alternate-li:.75rem 0;
+$margin-list-alternate-li: 0.75rem 0;
 
 //ICONS
-$margin-list-icon-li:0 0 0 2rem;
-$list-style-icon:none;
-$display-list-icon:flex;
-$flex-direction-icon:row;
+$margin-list-icon-li: 0 0 0 2rem;
+$list-style-icon: none;
+$display-list-icon: flex;
+$flex-direction-icon: row;
 
 //DEFINITIONS
-$margin-list-definition:2rem 0;
-$padding-list-definition:0;
-$padding-list-definition-p:1rem 0;
-$margin-list-definiton-p:0 2.5rem ;
-$line-height-definition-p:2.5rem;
+// $margin-list-definition: 2rem 0;
+// $padding-list-definition: 0;
+// $padding-list-definition-p: 1rem 0;
+// $margin-list-definiton-p: 0 56rem;
+// $line-height-definition-p: 2.5rem;
 
+$text-transform-title: capitalize;
+$list-style-item: none;
+$padding-item: 0;
+$margin: 1em 0;
 
+$margin-left: 2em;
 //BLOCKQUOTE
-$font-style-blockquote:italic;
+$font-style-blockquote: italic;
 $margin-blockquote: 2rem 0;
-$border-blockquote: solid 3px  $color-neutral-5;
+$border-blockquote: solid 3px $color-neutral-5;
 $padding-blockquote: 0 1.5rem;
 $line-height-blockquote: 2.5rem;
-
 
 //----------------------------
 //LISTS SPECIFICATIONS
 //----------------------------
-.blockquote{
+
+//BLOCKQUOTE
+.blockquote {
     font-style: $font-style-blockquote;
     margin: $margin-blockquote;
-    border-left:$border-blockquote;
+    border-left: $border-blockquote;
     padding: $padding-blockquote;
     line-height: $line-height-blockquote;
 }
-.definition{
-    margin: $margin-list-definition;
-    padding: $padding-list-definition;
-
-    > p{
-        line-height: $line-height-definition-p;
-        margin: $margin-list-definiton-p;
-        padding: $padding-list-definition-p;
+//DEFINITION
+.definition {
+    list-style: none;
+    padding: 0;
+    margin: $margin;
+    .text-definition {
+        margin-left: 2rem;
     }
 }
+//LIST
+// .list {
+//     padding-left: $padding-list;
+//     margin: $margin-list;
 
+//     li {
+//         margin: $margin-list-li;
+//     }
+//     h3 {
+//         margin: 2rem 0;
+//     }
+// }
 
-.list{
-    padding-left: $padding-list;
-    margin: $margin-list;
-
-    li{
-    margin: $margin-list-li;
-    }
-    h3{
-       
-        margin: 2rem 0;
-        
-    }
-}
-
-.list-unordered{
+.list-unordered {
     // margin: $margin-list;
-    li{
-        margin:$margin-list-unordered-li;
+    li {
+        margin: $margin-list-unordered-li;
     }
 }
 
 .list-ordered {
     // padding-left:$padding-list-ordered;
     // margin:$margin-list;
-    
+
     li {
         margin: $margin-list-ordered-li;
     }
-  }
+}
 
-  .list-alternate{
-    li{
+.list-alternate {
+    li {
         margin: $margin-list-alternate-li;
     }
-  }
+}
 
-  .list-icon{
-   
-       
-      li{
-        margin:$margin-list-icon-li;
-       
-        &.circle{
-        img{
-            width:10px;
-            height: 10px;
-        } 
-        text-align: center;
-        width: 24px;
-        height: 24px;
-        
-        border: 2px solid $color-neutral-5;
-        border-radius: 50px;
+//ICON
 
+// .list-icon {
+//     display: $display-list-icon;
+//     flex-direction: $flex-direction-icon;
+//     list-style: $list-style-icon;
+//     margin: 0 0.5rem;
+//     li {
+//         margin: $margin-list-icon-li;
+//     }
+// }
+
+// ICON
+$padding-list-icon: 0;
+$margin-list-list-icon--li: 0 0.5em;
+$list-style-list-icon: none;
+$display-list-icon: flex;
+$flex-direction-list-icon: row;
+
+.list-icon {
+    display: $display-list-icon;
+    flex-direction: $flex-direction-list-icon;
+    padding-left: $padding-list-icon;
+    margin: $margin-list;
+    list-style: $list-style-list-icon;
+
+    li {
+        margin: $margin-list-list-icon--li;
+    }
+    li:last-of-type {
+        padding: 0 1rem 0 0;
+    }
+    .icon {
+        &:hover {
+            color: $colorHover;
         }
-      }
-
-      ul{
-        display: $display-list-icon;
-        flex-direction: $flex-direction-icon;
-        list-style: $list-style-icon;
-      
-       }
- 
-     
-  }
-
+    }
+}
