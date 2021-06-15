@@ -8,8 +8,11 @@
 //----------------------------
 
 //BLOCKQUOTE
+
 $font-style-blockquote: italic;
-$border-left-blockquote: 3px solid $color-neutral-5;
+$margin-blockquote: 2rem 0;
+$border-blockquote: solid 3px $color-neutral-5;
+$padding-blockquote: 0 1.5rem;
 
 //----------------------------
 //DEFAULT SPECIFICATIONS
@@ -19,5 +22,7 @@ $border-left-blockquote: 3px solid $color-neutral-5;
 blockquote,
 .blockquote {
     font-style: $font-style-blockquote;
-    border-left: $border-left-blockquote;
+    margin: $margin-blockquote;
+    padding: $padding-blockquote;
+    border-left: $border-blockquote;
 }

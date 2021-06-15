@@ -2,16 +2,15 @@
   ./src/scss/ieps_framework/modules/_init.scss
   Module du init
  */
-
+@use "sass:map";
 //FICHIER D'INITIALISATION
 //FRAMEWORK RECUPERABLE D'UN SITE A L'AUTRE
 
 //DIMENSIONS D'ECRANS
-
 $screen-sizes: (
     'xs': (
         'breakpoint': 0,
-        'container-size': auto,
+        'container-size': 90%,
     ),
     's': (
         'breakpoint': 576px,

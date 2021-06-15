@@ -10,51 +10,76 @@
 $margin-table: 1rem 0 3rem 0;
 $font-size-table: 1rem;
 $text-align-table: left;
+$border-spacing-table: 0;
+$width-table: 100%;
+
+//CAPTION
+$text-align-caption: left;
+$text-transform-caption: uppercase;
+$font-weight-caption: 900;
+$margin-bottom-caption: 2rem;
+
 //THEAD
 $text-transform-thead: uppercase;
 $font-family-thead: $font-2;
+$font-size-thead: 0.8rem;
+$padding-left-th-thead: 0.5rem;
+$font-size-tr-thead: 0.8rem;
 
-//FOOT
-
-//th
+//TH
 $font-weight-th: 300;
-//BORDER
 
+//TBODY
+$line-height-tbody: 3;
+$border-td-alternate-tbody: 0.5px solid $color-neutral-5;
+$padding-left-tr-alternate-tbody: 0.5rem;
+$border-th-alternate-tbody: 0.5px solid $color-neutral-5;
+$border-tr-default-tbody: 0.5px solid $color-neutral-5;
+$padding-left-tr-default-tbody: 0.5rem;
+
+//TFOOT
+$border-td-tfoot: 0.5px solid $color-neutral-5;
+$padding-left-td-tfoot: 0.5rem;
 //----------------------------
 //DEFAULT SPECIFICATIONS
 //----------------------------
 
 table {
-    caption {
-        text-transform: uppercase;
-        font-weight: 900;
-        font-family: $font-2;
-        text-align: left;
-        margin-bottom: 2rem;
-    }
-    border-spacing: 0;
+    border-spacing: $border-spacing-table;
     margin: $margin-table;
     font-size: $font-size-table;
     text-align: $text-align-table;
-    width: 100%;
+    width: $width-table;
+    caption {
+        text-transform: $text-transform-caption;
+        font-weight: $font-weight-caption;
+        font-family: $font-2;
+        text-align: $text-align-caption;
+        margin-bottom: $margin-bottom-caption;
+    }
 
     thead {
         text-transform: $text-transform-thead;
         font-family: $font-family-thead;
-        font-size: 0.8rem;
+        font-size: $font-size-thead;
         th {
-            padding-left: 0.5rem;
+            padding-left: $padding-left-th-thead;
         }
     }
+    tr {
+        font-size: $font-size-tr-thead;
+    }
+
     tbody {
+        line-height: $line-height-tbody;
         &.alternate {
             text-align: $text-align-table;
             td {
-                border: 0.5px solid $color-neutral-5;
+                border: $border-td-alternate-tbody;
             }
             tr {
                 > * {
-                    padding-left: 0.5rem;
+                    padding-left: $padding-left-tr-alternate-tbody;
                 }
             }
             tr:nth-child(odd) {
@@ -63,23 +88,16 @@ table {
 
             th {
                 font-weight: $font-weight-th;
-                border: 0.5px solid $color-neutral-5;
+                border: $border-th-alternate-tbody;
             }
         }
 
         &.default {
-            text-align: $text-align-table;
-            border-top: 3px solid blue;
-
             tr {
                 > * {
-                    border-top: 1px solid $color-neutral-6;
-                    padding-left: 0.5rem;
+                    border-top: $border-tr-default-tbody;
+                    padding-left: $padding-left-tr-default-tbody;
                 }
-
-                // &:last-of-type {
-                //     border-bottom: 20px solid blue;
-                // }
             }
 
             tr:nth-child(odd) {
@@ -92,8 +110,10 @@ table {
         }
     }
 }
+
 tfoot {
     td {
-        padding-left: 0.5rem;
+        border-top: $border-td-tfoot;
+        padding-left: $padding-left-td-tfoot;
     }
 }

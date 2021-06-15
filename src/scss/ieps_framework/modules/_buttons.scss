@@ -20,6 +20,8 @@ $color-btn: $color-neutral-4;
 $color-btn-less: $color-2;
 $color-btn-hover: $colorHover;
 
+$display-btn-fit: block;
+$text-btn-fit: center;
 //FONT
 $font-size-btn: 0.7rem;
 $font-weight-btn: 900;
@@ -43,8 +45,11 @@ $padding-btn-default: $padding-btn;
 //BTN LARGE
 $padding-btn-large: 0.75rem 3.2rem;
 
+//BTN FIT
+$padding-btn-fit: $padding-btn-default;
 //BTN FIT (+SMALL)
 $font-size-fs-btn: 0.5rem;
+$padding-btn-fit-small: $padding-btn-small;
 
 //BTN ICON
 
@@ -54,26 +59,17 @@ $opacity-btn: 0.2;
 //BTN LESS
 $background-btn-less: $colorLess;
 
-//BTN ALIGNES
-$display-btn-div: flex;
-$align-items-btn-div: flex-start;
-
 //----------------------------
 //BUTTONS SPECIFICATIONS
 //----------------------------
-.inline {
-    display: $display-btn-div;
-    align-items: $align-items-btn-div;
-    list-style: none;
-    padding: 0;
-}
+
 button,
 .btn {
     display: $display-btn;
     font-size: $font-size-btn;
     font-weight: $font-weight-btn;
     font-family: $font-family-btn;
-    padding: $padding-btn;
+    padding: $padding-btn-default;
     border: $border-btn;
     letter-spacing: $letter-spacing-btn;
     text-decoration: $text-decoration-btn;
@@ -95,7 +91,16 @@ button,
         padding: $padding-btn-large;
     }
     &.fit {
+        display: $display-btn-fit;
         font-size: $font-size-fs-btn;
+        text-align: $text-btn-fit;
+        padding: $padding-btn-fit;
+    }
+    &.fit-small {
+        display: $display-btn-fit;
+        font-size: $font-size-fs-btn;
+        text-align: $text-btn-fit;
+        padding: $padding-btn-fit-small;
     }
     &.icon {
     }

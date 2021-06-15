@@ -1,0 +1,135 @@
+/*
+  ./src/scss/ieps_framework/modules/_card.scss
+  Module des formulaires
+ */
+
+//----------------------------
+//CARD VARIABLES
+//----------------------------
+
+.card {
+    display: block;
+    text-align: center;
+    padding: 3rem;
+    border-bottom: 3px solid $color-neutral-5;
+
+    &:nth-of-type(2n) {
+        border-right: 3px solid $color-neutral-5;
+        @media screen and (max-width: map-get($screen-sizes, 's', 'breakpoint')) {
+            border: none;
+        }
+    }
+    .principal-article {
+        margin: 2rem 4rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        // @media screen and (min-width: map-get($screen-sizes, 's', 'breakpoint')) {
+        //     margin-left: 0;
+        //     margin-right: 0;
+        // }
+        p {
+            text-align: center;
+            font-style: italic;
+        }
+    }
+    p {
+        line-height: 2rem;
+    }
+    @media screen and (max-width: map-get($screen-sizes, 's', 'breakpoint')) {
+        padding: 0;
+    }
+
+    .card-title {
+        letter-spacing: 0.2rem;
+        @media screen and (max-width: map-get($screen-sizes, 's', 'breakpoint')) {
+            font-size: $font-size-h2;
+        }
+    }
+}
+.img-generic {
+    padding-top: 3rem;
+}
+.btn-card-1 {
+    margin-top: 3rem;
+}
+.img-card {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+.zoom-hover {
+    .zoom {
+        overflow: hidden;
+        position: relative;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            max-width: 100%;
+            transition: all 0.8s;
+        }
+    }
+    &:hover {
+        .zoom {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.numerotation {
+    justify-content: center;
+}
+
+.numerotation-page {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 4rem;
+    font-weight: 900;
+    font-size: 0.7rem;
+
+    li {
+        &:first-of-type a {
+            border-left: 3px solid $color-neutral-5;
+        }
+        a {
+            border-right: 3px solid $color-neutral-5;
+            border-top: 3px solid $color-neutral-5;
+            border-bottom: 3px solid $color-neutral-5;
+            // display: block;
+            padding: 0.4rem 0.8rem;
+
+            margin: 0;
+            text-decoration: none;
+            &:hover {
+                background: $color-neutral-5;
+            }
+        }
+    }
+}
+
+.hr {
+    align-items: center;
+    display: flex;
+    text-align: center;
+    margin-bottom: 2rem;
+    // margin-top: -2rem;
+    // padding-top: 2rem;
+}
+.hr::before,
+.hr::after {
+    border-top: 0.0625em solid $color-neutral-5;
+    content: '';
+    flex: 1;
+    margin: 0 0.5em;
+}
+
+.author {
+    margin-bottom: 2rem;
+}

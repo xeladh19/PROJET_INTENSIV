@@ -10,7 +10,9 @@
 //PARAGRAPHES
 $font-1: 'Merriweather', Georgia, serif;
 $font-color-default: $color-text;
-$font-size-default: 1em;
+$font-size-ecran-medium: 0.9rem;
+$font-size-default: 1rem;
+$font-size-small: 0.8rem;
 $font-weight-default: 300;
 $line-height-default: 1.65;
 
@@ -34,6 +36,7 @@ $line-height-h2: 1.2;
 $margin-h2: 0 0 1rem 0;
 $letter-spacing-h2: 0.04em;
 $text-transform-h2: uppercase;
+
 //H3
 $font-color-h3: $color-text;
 $font-size-h3: 1.25rem;
@@ -83,7 +86,12 @@ $code-border: $color-neutral-5 1px solid;
 
 $hr-margin: 3rem 0;
 $hr-border: 1px solid $color-neutral-5;
-
+//BOX
+$font-weight-box: 200;
+$border-box: 2px solid $color-neutral-5;
+$padding-box: 1rem;
+$line-height-box: 2rem;
+$text-align-box: justify;
 // PRE
 $padding-pre: 1rem;
 $font-size-pre: 0.7rem;
@@ -91,16 +99,27 @@ $font-weight-pre: 150;
 $border-pre: 2px solid $color-neutral-2;
 $color-pre: $color-text;
 $background-pre: $color-neutral-2;
+$overflow-pre: hidden;
 
 //----------------------------
 //DEFAULT SPECIFICATIONS
 //----------------------------
 body {
     font-family: $font-1;
-    font-size: $font-size-default;
+    font-size: $font-size-small;
     font-weight: $font-weight-default;
     line-height: $line-height-default;
     color: $font-color-default;
+
+    @media screen and (min-width: map-get($screen-sizes, 'm', 'breakpoint')) {
+        font-size: $font-size-ecran-medium;
+    }
+    @media screen and (min-width: map-get($screen-sizes, 'l', 'breakpoint')) {
+        font-size: $font-size-default;
+    }
+    p {
+        text-align: justify;
+    }
 }
 //LINKS
 a {
@@ -194,6 +213,16 @@ h6,
     text-transform: $text-transform-h6;
 }
 
+//BOX
+
+.box {
+    font-weight: $font-weight-box;
+    border: $border-box;
+    padding: $padding-box;
+    line-height: $line-height-box;
+    text-align: $text-align-box;
+}
+
 //PRE
 pre {
     padding: $padding-pre;
@@ -202,4 +231,5 @@ pre {
     border: $border-pre;
     color: $color-pre;
     background: $background-pre;
+    overflow: $overflow-pre;
 }

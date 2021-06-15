@@ -8,138 +8,112 @@
 //----------------------------
 
 $margin-list: 2rem 0;
-$padding-list: 20%;
+$margin: 1rem 0;
 $margin-list-li: 0.5em 0;
 
 //UNORDERED - UL
-// $padding-list-unordered:20%;
 $margin-list-unordered-li: 0.75rem 0;
+$margin-top-list-unordered: 1.5rem;
 
 //ORDERED
-// $padding-list-ordered:20%;
 $margin-list-ordered-li: 0.75rem 0;
+$margin-top-list-ordered: 1.5rem;
 
 //ALTERNATE - UL.ALTERNATE
-// $padding-list-alternate:1em;
+$margin-top-list-alternate: 1.5rem;
 $margin-list-alternate-li: 0.75rem 0;
 
 //ICONS
-$margin-list-icon-li: 0 0 0 2rem;
+$margin-list-icon-li: 0 0 0 1rem;
 $list-style-icon: none;
 $display-list-icon: flex;
 $flex-direction-icon: row;
+$padding-list-icon: 0;
+$margin-top-list-icons: 1.5rem;
+$display-a-list-icon: flex;
+$justify-content-a-list-icon: center;
+$width-a-list-icon: 30px;
+$height-a-list-icon: 30px;
+$text-decoration-list-icon: none;
 
-//DEFINITIONS
-// $margin-list-definition: 2rem 0;
-// $padding-list-definition: 0;
-// $padding-list-definition-p: 1rem 0;
-// $margin-list-definiton-p: 0 56rem;
-// $line-height-definition-p: 2.5rem;
+//ICON-CIRCLED
+$icon-circled-border: 2px solid $color-neutral-5;
+$icon-circled-border-radius: 50%;
 
-$text-transform-title: capitalize;
-$list-style-item: none;
-$padding-item: 0;
-$margin: 1em 0;
-
-$margin-left: 2em;
-//BLOCKQUOTE
-$font-style-blockquote: italic;
-$margin-blockquote: 2rem 0;
-$border-blockquote: solid 3px $color-neutral-5;
-$padding-blockquote: 0 1.5rem;
-$line-height-blockquote: 2.5rem;
-
+//DEFINITION
+$list-style-definition: none;
+$padding-definition: 0;
+$margin-left-text-definition: 2rem;
+$text-transform-definiton: capitalize;
 //----------------------------
 //LISTS SPECIFICATIONS
 //----------------------------
 
-//BLOCKQUOTE
-.blockquote {
-    font-style: $font-style-blockquote;
-    margin: $margin-blockquote;
-    border-left: $border-blockquote;
-    padding: $padding-blockquote;
-    line-height: $line-height-blockquote;
-}
 //DEFINITION
 .definition {
-    list-style: none;
-    padding: 0;
+    list-style: $list-style-definition;
+    padding: $padding-definition;
     margin: $margin;
     .text-definition {
-        margin-left: 2rem;
+        margin-left: $margin-left-text-definition;
+    }
+    h4 {
+        text-transform: $text-transform-definiton;
+        font-family: $font-1;
     }
 }
-//LIST
-// .list {
-//     padding-left: $padding-list;
-//     margin: $margin-list;
-
-//     li {
-//         margin: $margin-list-li;
-//     }
-//     h3 {
-//         margin: 2rem 0;
-//     }
-// }
 
 .list-unordered {
-    // margin: $margin-list;
+    margin-top: $margin-top-list-unordered;
     li {
         margin: $margin-list-unordered-li;
     }
 }
 
 .list-ordered {
-    // padding-left:$padding-list-ordered;
-    // margin:$margin-list;
-
+    margin-top: $margin-top-list-ordered;
     li {
         margin: $margin-list-ordered-li;
     }
 }
 
 .list-alternate {
+    margin-top: $margin-top-list-alternate;
     li {
         margin: $margin-list-alternate-li;
     }
 }
 
 //ICON
-
-// .list-icon {
-//     display: $display-list-icon;
-//     flex-direction: $flex-direction-icon;
-//     list-style: $list-style-icon;
-//     margin: 0 0.5rem;
-//     li {
-//         margin: $margin-list-icon-li;
-//     }
-// }
-
-// ICON
-$padding-list-icon: 0;
-$margin-list-list-icon--li: 0 0.5em;
-$list-style-list-icon: none;
-$display-list-icon: flex;
-$flex-direction-list-icon: row;
-
 .list-icon {
+    margin-top: $margin-top-list-icons;
     display: $display-list-icon;
-    flex-direction: $flex-direction-list-icon;
+    flex-direction: $flex-direction-icon;
     padding-left: $padding-list-icon;
     margin: $margin-list;
-    list-style: $list-style-list-icon;
+    list-style: $list-style-icon;
 
     li {
-        margin: $margin-list-list-icon--li;
+        margin: $margin-list-icon-li;
     }
-    li:last-of-type {
-        padding: 0 1rem 0 0;
-    }
-    .icon {
+
+    a {
+        display: $display-a-list-icon;
+        justify-content: $justify-content-a-list-icon;
+        width: $width-a-list-icon;
+        height: $height-a-list-icon;
+
+        text-decoration: $text-decoration-list-icon;
         &:hover {
             color: $colorHover;
         }
+    }
+}
+
+.circled {
+    border: $icon-circled-border;
+    border-radius: $icon-circled-border-radius;
+    &:hover {
+        border-color: $colorHover;
     }
 }

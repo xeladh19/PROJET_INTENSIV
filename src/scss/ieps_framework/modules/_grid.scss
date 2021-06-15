@@ -2,34 +2,40 @@
   ./src/scss/ieps_framework/modules/_grid.scss
   Module du grid
  */
-// .grid {
-//     display: grid;
-//     grid-template-columns: repeat(12, 1fr);
-//     gap: 1rem 1rem;
-//     > * {
-//         grid-column: span 12;
-//         grid-row: span 1;
-//     }
-// }
-// @each $label, $breakpoint, $containerWidth in $gridValues {
-//     @media screen and (min-width:#{$breakpoint}) {
-//         .container {
-//             width: #{$containerWidth};
-//             margin: 0 auto;
-//             padding: 0 1rem;
-//         }
-//         @for $i from 1 through 12 {
-//             .col#{$label}-#{$i} {
-//                 grid-column: span + ' ' + #{$i};
-//             }
-//             .row#{$label}-#{$i} {
-//                 grid-row: span + ' ' + #{$i};
-//             }
-//             @for $j from 0 through 11 {
-//                 .offset#{$label}-#{$j}.col#{$label}-#{$i} {
-//                     grid-column: #{$j + 1} / span + ' ' + #{$i};
-//                 }
-//             }
-//         }
-//     }
-// }
+
+//----------------------------
+//GRIDS VARIABLES
+//----------------------------
+$row-gap: 0;
+$column-gap: 0;
+
+//----------------------------
+//GRID SPECIFICATIONS
+//----------------------------
+@use "sass:map";
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: $row-gap $column-gap;
+    > * {
+        grid-column: span 12;
+        grid-row: span 1;
+    }
+}
+@each $size, $values in $screen-sizes {
+    @media screen and (min-width: map-get($values, 'breakpoint')) {
+        @for $i from 1 through 12 {
+            .col-#{$size}-#{$i} {
+                grid-column: span + ' ' + #{$i};
+            }
+            .row-#{$size}-#{$i} {
+                grid-row: span + ' ' + #{$i};
+            }
+            @for $j from 0 through 11 {
+                .offset#{$size}-#{$j}.col#{$size}-#{$i} {
+                    grid-column: #{$j + 1} / span + ' ' + #{$i};
+                }
+            }
+        }
+    }
+}

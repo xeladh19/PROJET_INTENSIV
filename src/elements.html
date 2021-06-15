@@ -9,10 +9,11 @@
             src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
             data-auto-replace-svg="nest"
         ></script>
+       
         <title>INTENSIV'</title>
     </head>
     <!-- CONTENEUR PRINCIPAL -->
-    <body class="container grid">
+    <body class="container grid col-s">
         <!-- HEADER -->
         <header class="main-header text-center">
             <!-- TITRE PRINCIPAL -->
@@ -23,7 +24,7 @@
 
             <!-- MENU NAV -->
             <nav>
-                <div class="nav-content">
+                <div class="nav-content  hide-until-l">
                     <div class="display -flex justify space-between align">
                         
                         <ul class="ul-nav">
@@ -53,16 +54,20 @@
                 </ul>
                     </div>
                 </div>
-        
+                <div class="hide-from-l">
+                    <div class="menu">
+                        <i class="fas fa-bars"></i><h5>Menu</h5>
+                    </div>
+                </div>
             </nav>
         </header>
 
         <!--MAIN-->
         <main>
-            <div class="main-content"> 
+            <div class="main-content  content-framed"> 
             <div class="text-center">
                 <!-- TITRE PAGE -->
-                <h1>Elements <br/>reference</h1>
+                <h1 class="main-title">Elements <span class="display -block">reference</span></h1>
             </div>
             <!-- COLOR-->
             <section>
@@ -111,8 +116,7 @@
                     This is <b>bold</b> and this is <strong>strong</strong>.
                     This is <i>italic </i>and this is <em>emphasized</em>. This
                     is <sup>superscript</sup> text and this is
-                    <sub>subscript</sub> text.<br />
-                    This is <u>underlined</u> and this is code:
+                    <sub>subscript</sub> text.<br />This is <u>underlined</u> and this is code:
                     <code>for(;;) { ... }</code> .Finally this is a
                     <a href="#">link</a>.
                 </p>
@@ -184,9 +188,9 @@
                 <h2>Lists</h2>
 
                 <!--Unordered - ul-->
-                <div class="col-md-3">
+                <div class="col-m-6">
                     <h3>Unordered - ul</h3>
-                    <ul class="list">
+                    <ul class="list-unordered">
                         <li>Dolor pulvinar etiam.</li>
                         <li>Sagittis lorem eleifend.</li>
                         <li>Felis feugiat dolore viverra.</li>
@@ -201,10 +205,11 @@
                         <li>Dolor pulvinar etiam etiam.</li>
                     </ul>
                 </div>
-                <!--Ordered-->
-                <div class="col-md-3">
+                
+                <div class="col-m-6">
+                    <!--Ordered-->
                     <h3>Ordered</h3>
-                    <ol class="list-ordonee">
+                    <ol class="list-ordered">
                         <li>Dolor pulvinar etiam.</li>
                         <li>Etiam vel felis at viverra.</li>
                         <li>Felis enim feugiat magna.</li>
@@ -214,60 +219,61 @@
 
                     <!--Icons-->
                     <h3>Icons</h3>
-                    <div>
-                        <ul class="list list-icon">
+                    
+                        <ul class="list-icon">
                             <li>
-                                <a href="#" class="icon"
+                                <a href="#" 
                                     ><i class="fab fa-twitter"></i
                                 ></a>
                             </li>
                             <li>
-                                <a href="#" class="icon"
+                                <a href="#" 
                                     ><i class="fab fa-facebook-f"></i
                                 ></a>
                             </li>
                             <li>
-                                <a href="#" class="icon"
+                                <a href="#" 
                                     ><i class="fab fa-instagram"></i
                                 ></a>
                             </li>
                             <li>
-                                <a href="#" class="icon"
+                                <a href="#" 
                                     ><i class="fab fa-github"></i
                                 ></a>
                             </li>
                             <li>
-                                <a href="#" class="icon"
+                                <a href="#" 
                                     ><i class="fab fa-dribbble"></i></a>
                             </li>
                         </ul>
-                        <ul class="list list-icon">
+
+                        <!-- CIRCLED -->
+                        <ul class="list-icon ">
                             <li>
-                                <a href="#" class="icon border"
-                                    ><i class="fab fa-twitter"></i
+                                <a href="#" class="circled" ><i class="fab fa-twitter"></i
                                 ></a>
                             </li>
                             <li>
-                                <a href="#" class="icon border"
+                                <a href="#"class="circled"
                                     ><i class="fab fa-facebook-f"></i
                                 ></a>
                             </li>
                             <li>
-                                <a href="#" class="icon border"
+                                <a href="#" class="circled"
                                     ><i class="fab fa-instagram"></i
                                 ></a>
                             </li>
                             <li>
-                                <a href="#" class="icon border"
+                                <a href="#" class="circled"
                                     ><i class="fab fa-github"></i
                                 ></a>
                             </li>
-                            <li>
-                                <a href="#" class="icon border"
+                            <li >
+                                <a href="#" class="circled"
                                     ><i class="fab fa-dribbble"></i></a>
                             </li>
                         </ul>
-                    </div>
+                    
                 </div>
 
                 <!--DEFINITION-->
@@ -417,7 +423,7 @@
                             <td>19.99</td>
                         </tr>
                         <!--ITEM 5-->
-                        <tr class="top">
+                        <tr>
                             <th>Item 5</th>
                             <td>Ante turpis integer aliquet porttitor.</td>
                             <td>29.99</td>
@@ -435,52 +441,57 @@
             </section>
 
             <!--Buttons-->
-            <section>
+            <section class="grid">
                 <h2>Buttons</h2>
-                <ul class="inline">
-                    <li><a href="#" class="btn">Primary</a></li>
-                    <li><a href="#" class="btn less">Default</a></li>
-                </ul>
-                <ul div class="inline">
-                    <li><a href="#" class="btn large">Large</a></li>
-                    <li><a href="#" class="btn less">Default</a></li>
-                    <li><a href="#" class="btn small less">Small</a></li>
-                </ul>
-                <ul class="inline">
-                    <li><a href="#" class="btn">Fit</a></li>
-                    <li><a href="#" class="btn less">Fit</a></li>
-                </ul>
-                <ul class="inline">
-                    <li><a href="#" class="btn fit">Fit + small</a></li>
-                    <li><a href="#" class="btn fit less">Fit + small</a></li>
-                </ul>
-                <ul class="inline">
-                    <li><a href="#" class="btn"><i class="fas fa-search"></i> Icon</a></li>
-                    <li><a href="#" class="btn less"><i class="fas fa-download"></i> Icon</a></li>
-                </ul>
-                <ul class="inline">
-                    <li><a href="#" class="btn opacity">Primary</a></li>
-                    <li> <a href="#" class="btn less opacity">Default</a></li>
-                </ul>
+                <div>
+                    <a href="#" class="btn">Primary</a>
+                    <a href="#" class="btn less">Default</a>
+                </div>
+                <div >
+                    <a href="#" class="btn large">Large</a>
+                    <a href="#" class="btn less">Default</a>
+                    <a href="#" class="btn small less">Small</a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="#" class="btn fit ">Fit</a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="#" class="btn less fit ">Fit</a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="#" class="btn fit-small">Fit + small</a>
+                </div>
+                <div class="col-xs-6">
+                    <a href="#" class="btn fit-small less">Fit + small</a>
+                </div>
+                <div>
+                    <a href="#" class="btn"><i class="fas fa-search"></i> Icon</a>
+                    <a href="#" class="btn less"><i class="fas fa-download"></i> Icon</a>
+                </div>
+                <div>
+                    <a href="#" class="btn opacity">Primary</a>
+                    <a href="#" class="btn less opacity">Default</a>
+                </div>
                 <hr />
             </section>
 
             <!--FORM-->
             <section>
                 <h2>Form</h2>
-                <form action="Formulaire" method="get" class="grid">
+                <form action="Formulaire" method="get" class="grid gap1"  >
                     <!--CHAMP NOM-->
-                    <div >
+                    
+                    <div class="col-xs-6 ">
                         <label for="name"></label>
-                        <input type="text" name="name" placeholder="Name"  class="validate"/>
+                        <input type="text" name="name" placeholder="Name"  class="box"/>
                     </div>
 
                     <!--CHAMP EMAIL-->
-                    <div>
+                    <div class="col-xs-6">
                         <label for="mail"></label>
-                        <input  type="text" name="mail" placeholder="Email" class="validate"/>
+                        <input  type="text" name="mail" placeholder="Email" class="box"/>
                     </div>
-
+               
                     <!--CHAMP CATEGORY-->
                 <div class="form">
                     <label for="category"></label>
@@ -489,68 +500,69 @@
                     </select>
                 </div>
                     <!--CHAMP SELECTION RADIO-->
-                    <div >
-                        <div class="radio-item" >
-                                <input type="radio"name="balise"id="low"checked="checked" class="radio" />
+                    <div class="grid">
+                        <div class="display -flex col-s-4 form-radio" >
+                                <input type="radio"name="balise"i d="low" checked="checked" class="radio" />
                                 <label for="low">Low</label>
                             </div>
-                            <div class="radio-item" >
-                                <input  type="radio" name="balise"  id="normal"
-                                    class="radio"/>
+                            <div class="display -flex col-s-4 form-radio" >
+                                <input  type="radio" name="balise"  id="normal" class="radio"/>
                                 <label for="normal">Normal</label>
-                            
-                            <div class="radio-item" > 
+                            </div>
+                            <div class="display -flex col-s-4 form-radio"> 
                                 <input type="radio" name="balise"  id="high" class="radio" />
                                 <label for="high">High</label>
                             
                     </div>
+                    </div>
 
                     <!--SELECTION CARRE-->
-                    <div>
-                        <div>
+                    <div class="grid">
+                        <div class="display -flex col-s-4 form-check" > 
                                 <input type="checkbox" name="email" id="email" value="1"  class="checkbox" />
                                 <label for="email">Email me a copy</label>
                             </div>
-                            <div>
+                            <div class="display -flex col-s-4 form-check">
                                 <input type="checkbox"name="humain"id="human"value="2"checked="checked"class="checkbox" />
                                 <label for="human">I am a human</label>
                             </div>
                     </div>
 
                     <!--CHAMP TEXTE-->
-                    <div class="form">
-                        <textarea  name="message"  id="message" placeholder="Enter your message" class="validate"  ></textarea>
+                    <div class="text-area">
+                        <textarea  name="message"  id="message" placeholder="Enter your message" class="box"  ></textarea>
                     </div>
 
                     <!--SEND MESSAGE-->
-                    <div class="form">
+                    <div class="form-btn">
                         <input type="submit" value="Send message" class="btn" />
                     <!--RESET-->
-                        <input type="submit" value="Reset" class="btn less" />
+                        <input type="submit" value="Reset" class="btn small less" />
                     </div>
                 </form>
             </section>
             <hr />
 
             <!--IMAGE-->
-            <section>
+            <section >
                 <h2>Image</h2>
                 <h4>Fit</h4>
                 <div>
-                    <img src="../documents/images/img1.jpg" alt="" />
-                </div>
                 <div>
-                    <img src="../documents/images/img2.jpg" alt="" />
-                    <img src="../documents/images/img3.jpg" alt="" />
-                    <img src="../documents/images/img4.jpg" alt="" />
-                    <img src="../documents/images/img5.jpg" alt="" />
-                    <img src="../documents/images/img6.jpg" alt="" />
-                    <img src="../documents/images/img7.jpg" alt="" />
-                    <img src="../documents/images/img8.jpg" alt="" />
-                    <img src="../documents/images/img9.jpg" alt="" />
-                    <img src="../documents/images/img10.jpg" alt="" />
+                    <img src="../documents/images/img1.jpg" alt="" class=" full col-xs-12"/>
                 </div>
-
+                <div class="grid img-mini">
+                    <img src="../documents/images/img2.jpg" alt="" class=" col-xs-4"/>
+                    <img src="../documents/images/img3.jpg" alt=""class=" col-xs-4" />
+                    <img src="../documents/images/img4.jpg" alt=""class=" col-xs-4" />
+                    <img src="../documents/images/img5.jpg" alt="" class=" col-xs-4"/>
+                    <img src="../documents/images/img6.jpg" alt="" class=" col-xs-4"/>
+                    <img src="../documents/images/img7.jpg" alt="" class=" col-xs-4"/>
+                    <img src="../documents/images/img8.jpg" alt=""class=" col-xs-4" />
+                    <img src="../documents/images/img9.jpg" alt=""class=" col-xs-4" />
+                    <img src="../documents/images/img10.jpg" alt="" class=" col-xs-4"/>
+                </div>
+            </div>
                 <!--FLEXBOX-->
                 <h4>Left & Right</h4>
 
@@ -640,78 +652,72 @@
     print 'It took ' + i + ' iterations to sort the deck.';
                  </pre>
             </section>
+</div>
+            
+          <!-- FOOTER -->
+          <footer class="main-footer grid">
+            <!--FORMULAIRE FOOTER-->
+            <form action="Formulaire_footer" method="get" class="col-l-6 row-l-4">
+                <!--NAME-->
+                <label for="name" class="h4">Name</label>
+                <input type="text" name="name" id="name" class="box"/>
+                <!--EMAIL-->
+                <label for="mail" class="h4">Email</label>
+                <input type="text" name="mail" id="mail" class="box"/>
+                <!--MESSAGE-->
+                <label for="message" class="h4">Message</label>
+                <textarea name="message" class="box"></textarea>
 
-            <!--FOOTER-->
-            <footer class="footer-content">
-                <!--FORMULAIRE FOOTER-->
-                <form action="Formulaire_footer" method="get">
-                    <!--NAME-->
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" />
-                    <!--EMAIL-->
-                    <label for="mail">Email</label>
-                    <input type="text" name="mail" id="mail" />
-                    <!--MESSAGE-->
-                    <label for="message">Message</label>
-                    <textarea name="message"></textarea>
-
-                    <!--SEND MESSAGE-->
-                    <div>
-                        <input type="submit" value="Send message" />
-                    </div>
-                </form> 
-                          
-                    <div class="display -flex">
-                        <!--ADRESS-->
-                        <h4>Address</h4>
-                        <address>
-                            <a href="https://www.google.be/maps/place/IEPS+Fl%C3%A9ron/@50.6111977,5.6804956,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0f41c3d702da7:0x2d5b3cb7b45da7ab!8m2!3d50.6111977!4d5.6826843" target="_blank">
-                                9 rue Charles Deliège 4247 <br />
-                                Fléron, TN 00000-000
-                            </a>
-                        </address>
-                    </div>
-                    <!--PHONE-->
-                    <div class="display -flex">
-                        <h4>Phone</h4>
-                        <address>
-                            <a href="tel:+32043779999">04/3779999</a>
-                        </address>
-                    </div>
-                    <!--EMAIL-->
-                    <div class="display -flex">
-                        <h4>Email</h4>
-                        <address>
-                        <a href="mailto:info@promotion-sociale.be">info@promotion-sociale.be</a  >
-                        </address>
-                        </div>
-                    <!--SOCIAL-->
-                    <div class="display -flex">
-                        <h4>Social</h4>
-                        <div>
-                            <ul class="list-icon">
-                                <li>
-                                    <a href="#" class="icon"><i class="fab fa-twitter"></i ></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="icon"><i class="fab fa-facebook-f"></i ></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="icon"><i class="fab fa-instagram"></i ></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="icon"><i class="fab fa-github"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <!--SEND MESSAGE-->
+                <div>
+                    <input type="submit" value="Send message" class="btn less"/>
+                </div>
+            </form> 
+                      
                 
-            </footer>
-        </div>
+                    <!--ADRESS-->
+                    <address class="col-l-6">
+                        <ul class="display -flex">
+                            <li class="h4">Address</li>
+                            <li><a href="https://www.google.be/maps/place/IEPS+Fl%C3%A9ron/@50.6111977,5.6804956,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0f41c3d702da7:0x2d5b3cb7b45da7ab!8m2!3d50.6111977!4d5.6826843" target="_blank">9 rue Charles Deliège 4247 </a><span class="display -block">Fléron, TN 00000-0000</span></li>
+                        </ul>
+                    </address>
+                <!--PHONE-->
+                <address class="col-l-6">
+                    <ul class="display -flex">
+                        <li class="h4">Phone</li>
+                        <li>(000) 000-0000</li>
+                    </ul>
+                </address>
+                <!--EMAIL-->
+                
+                    <address class="col-l-6">
+                        <ul class="display -flex">
+                            <li class="h4">Email</li>
+                            <li>info@untitled.tld</li>
+                        </ul>
+                    </address>
+                <!--SOCIAL-->
+                <div class="col-l-6 social">
+                    <ul class="display -flex align ">
+                        <li class="h4">Social</li>
+                        <li>
+                            <ul class="list-icon">
+                                <li><a href="#" class="circled"><i class="fab fa-twitter "></i></a></li>
+                                <li><a href="#" class="circled"><i class="fab fa-facebook-f "></i></a></li>
+                                <li><a href="#" class="circled"><i class="fab fa-instagram "></i></a></li>
+                                <li><a href="#" class="circled"><i class="fab fa-github "></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            
+        </footer>
         </main>
         <footer>
             <!--FOND COPYRIGHT-->
             <div class="copyright h6">&copy; Intensiv 2021 <span> | </span>   Design:<a href="https://www.promotion-sociale.be/" target="_blank"> Ieps</a></div>
         </footer>
     </body>
+    
 </html>

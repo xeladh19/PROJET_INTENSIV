@@ -17,6 +17,7 @@ $margin-ul-link: 0;
 $padding-ul-link: 0;
 $list-style-ul-nav: none;
 $display-ul-nav: flex;
+$font-size-nav-link: 0.7rem;
 //LINK
 $font-size-link: 0.8rem;
 $font-weight-link: 900;
@@ -38,6 +39,18 @@ $color-icon: $color-neutral-2;
 $display-icon: flex;
 $justify-content-icon: center;
 $align-icon: center;
+$padding-nav-icon: 0 0.1rem;
+$text-decoration-nav-icon: none;
+//MENU
+$display-menu: flex;
+$position-menu: fixed;
+$top-menu: 1rem;
+$right-menu: 4rem;
+$line-height-menu: none;
+$position-title-menu: fixed;
+$top-title-menu: 1.2rem;
+$right-title-menu: 1rem;
+$letter-spacing-title-menu: 0.1rem;
 
 //----------------------------
 //NAV SPECIFICATIONS
@@ -50,7 +63,6 @@ $align-icon: center;
 
 nav,
 .nav-content {
-    // background: $background-nav;
     font-family: $font-family-nav;
 
     ul {
@@ -59,7 +71,7 @@ nav,
     }
     .nav-link {
         display: $display-nav-link;
-        font-size: 0.7rem;
+        font-size: $font-size-nav-link;
         font-weight: $font-weight-link;
         padding: $padding-link;
         text-transform: $text-transform-link;
@@ -80,7 +92,8 @@ nav,
     color: $color-icon;
     display: $display-icon;
     justify-content: $justify-content-icon;
-    padding: 0 0.1rem;
+    padding: $padding-nav-icon;
+    text-decoration: $text-decoration-nav-icon;
 
     &:hover {
         color: $color-hover-icon;
@@ -89,4 +102,71 @@ nav,
 
 .align {
     align-items: $align-icon;
+}
+
+//----------------------------
+//MEDIA VARIABLES
+//----------------------------
+
+//NAV HIDEN
+@each $size, $values in $screen-sizes {
+    @media screen and (min-width: map-get($values, 'breakpoint')) {
+        .hide-from-#{$size} {
+            display: none;
+            align-items: center;
+        }
+    }
+}
+
+// NAV VISIBLE
+@each $size, $values in $screen-sizes {
+    @media screen and (max-width: map-get($values, 'breakpoint')) {
+        .hide-until-#{$size} {
+            display: none;
+        }
+    }
+}
+
+// .menu {
+//     display: $display-menu;
+//     position: $position-menu;
+//     top: $top-menu;
+//     right: $right-menu;
+//     color: $colorLess;
+//     line-height: $line-height-menu;
+//     align-items: center;
+
+// h5 {
+//     position: $position-title-menu;
+//     top: $top-title-menu;
+//     right: $right-title-menu;
+//     letter-spacing: $letter-spacing-title-menu;
+//     color: $color-neutral-4;
+// }
+// }
+
+#menu {
+    position: fixed;
+    top: 0;
+
+    right: -200px;
+    width: 200px;
+    height: 100%;
+    transition: left 900ms ease-in-out;
+
+    a {
+        color: black;
+        list-style: none;
+        text-align: right;
+    }
+}
+#menu:hover,
+#menu.on {
+    right: 0;
+    transition: left 300ms ease-in-out;
+
+    background: white;
+}
+#menu li {
+    float: none;
 }

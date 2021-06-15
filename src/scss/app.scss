@@ -23,20 +23,103 @@ body {
         display: block;
         width: 200px;
         border: 4px solid $color-neutral-4;
-        margin: auto;
+
         padding: 0.5rem;
-        margin: 4rem auto 2rem auto;
+        margin: 6rem auto 2rem auto;
     }
 }
 
 //MAIN CONTENT
 .main-content {
     background: $color-neutral-4;
-    padding: 8rem 8rem 6rem 8rem;
-}
+    width: 100%;
+    padding: 4rem 0;
 
+    @each $size, $values in $screen-sizes {
+        @media screen and (min-width: map-get($screen-sizes , 'l', 'breakpoint' )) {
+            padding: 4rem 0;
+        }
+
+        @media screen and (max-width: map-get($screen-sizes , 'm', 'breakpoint' )) {
+            padding: 3rem 2rem;
+        }
+        &.post {
+            @media screen and (min-width: map-get($screen-sizes , 'l', 'breakpoint' )) {
+                padding: 4rem 0 0 0;
+            }
+        }
+
+        &.content-framed {
+            background: $color-neutral-4;
+            padding: 8rem 2rem;
+            @media screen and (min-width: map-get($screen-sizes , 'l', 'breakpoint' )) {
+                padding: 8rem 5rem;
+            }
+        }
+
+        .main-title {
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            @media screen and (min-width: map-get($screen-sizes, 's', 'breakpoint')) {
+                font-size: 2.5rem;
+            }
+            @media screen and (min-width: map-get($screen-sizes, 'm', 'breakpoint')) {
+                font-size: 3rem;
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+            }
+            @media screen and (min-width: map-get($screen-sizes, 'l', 'breakpoint')) {
+                font-size: $font-size-h1;
+                display: block;
+            }
+        }
+    }
+}
 //MAIN FOOTER
 .main-footer {
+    background: $color-neutral-2;
+    ul {
+        list-style: none;
+    }
+
+    input,
+    textarea {
+        margin: 1.5rem 0 1rem 0;
+        background: none;
+    }
+
+    form {
+        border-right: 3px solid $color-neutral-5;
+        padding: 3rem;
+    }
+    address {
+        padding: 3rem 4rem;
+        border-bottom: 3px solid $color-neutral-5;
+        li:not(:last-of-type) {
+            margin-right: 4rem;
+        }
+        @media screen and (min-width: map-get($screen-sizes, 'xs', 'breakpoint')) {
+            padding-left: 0;
+            margin-left: 0;
+        }
+    }
+
+    .social {
+        padding: 3rem 4rem;
+        border-bottom: 3px solid $color-neutral-5;
+        .list-icon {
+            margin-left: 2rem;
+            a {
+                margin-bottom: 0.5rem;
+                align-items: center;
+            }
+        }
+        @media screen and (min-width: map-get($screen-sizes, 'xs', 'breakpoint')) {
+            padding-left: 0;
+            margin-left: 0;
+        }
+    }
 }
 
 //FOOTER
@@ -58,36 +141,32 @@ body {
 }
 
 //IMAGE PART
-img {
-    &.float-left {
-        width: 210px;
-        margin: 0.75rem 1rem 0;
-        // padding-top: 0.75rem;
-    }
-    &.float-right {
-        width: 210px;
-        margin: 1.2rem 0 0 1rem;
-    }
+
+.float-left {
+    width: 30%;
+    margin: 0.75rem 1rem 0 0;
 }
-.text-image {
-    margin-top: 2rem;
+.float-right {
+    width: 30%;
+    margin: 3.5rem 0 0 1rem;
 }
 
-//FOOTER
-.footer-content {
-    background: $color-neutral-2;
-    flex-direction: column;
+.full {
     display: flex;
-    form {
-        border-right: 2px solid red;
-    }
-    a {
-        text-decoration: none;
-    }
-    address {
-        border-bottom: 2px solid blue;
-    }
-    h4 {
-        color: $color-neutral-3;
+    padding-bottom: 1rem;
+    margin: 0;
+    width: 100%;
+    height: 500px;
+}
+
+.text-image {
+    margin-top: 5rem;
+}
+
+.img-mini {
+    gap: 0.6rem;
+    padding-bottom: 2rem;
+    img {
+        width: 100%;
     }
 }

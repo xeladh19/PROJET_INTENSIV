@@ -7,53 +7,92 @@
 //FORM VARIABLES
 //----------------------------
 
-//FORM
-$width-form: 100%;
-$padding-form: 0.7rem;
-$color-form: $color-text;
-$border-form: 2px solid $color-neutral-5;
+//BOX
+$width-box: 100%;
+$padding-box: 0.7rem;
+$color-box: $color-text;
+$border-box: 2px solid $color-neutral-5;
+$gap-box: 1rem;
 
 //TYPE RADIO
 $margin-top-radio: 2rem;
 $margin-right-radio: 1rem;
+$width-radio: 25px;
+$height-radio: 25px;
+$align-radio: flex-end;
+
 //TYPE CHECKBOX
 $margin-top-checkbox: 2rem;
 $margin-right-checkbox: 1rem;
+$width-checkbox: 25px;
+$height-checkbox: 25px;
 
-$row-gap: 0;
-$column-gap: 0;
+//SELECTED
+$width-selected: 100%;
+$padding-selected: 0.7rem;
+$color-selected: $color-text;
+$border-selected: 2px solid $color-neutral-5;
+$margin-selected: 1rem;
+
+//AREA
+$margin-area: 2rem;
+$width-area: 100%;
+
+//BTN
+$margin-form-btn: 2rem;
+
+//ITEMS
+$align-check: flex-end;
+//GAP
+$gap-form: 0 1rem;
 //----------------------------
 //FORM SPECIFICATIONS
 //----------------------------
 
-.form {
-    padding-top: 1.5rem;
-    list-style: none;
-}
-.validate {
-    width: $width-form;
-    padding: $padding-form;
-    color: $color-form;
-    border: $border-form;
+.box {
+    width: $width-box;
+    padding: $padding-box;
+    color: $color-box;
+    border: $border-box;
+    gap: $gap-box;
 }
 
 .radio {
     margin-top: $margin-top-radio;
     margin-right: $margin-right-radio;
-    width: 25px;
-    height: 25px;
+
+    width: $width-radio;
+    height: $height-radio;
 }
 
 .checkbox {
     margin-top: $margin-top-checkbox;
     margin-right: $margin-right-checkbox;
-    width: 25px;
-    height: 25px;
+    width: $width-checkbox;
+    height: $height-checkbox;
 }
 
 .selected {
-    width: 100%;
-    padding: 0.7rem;
-    color: $color-text;
-    border: 2px solid $color-neutral-5;
+    width: $width-selected;
+    padding: $padding-selected;
+    color: $color-selected;
+    border: $border-selected;
+    margin-top: $margin-selected;
+}
+
+.form-radio {
+    align-items: $align-radio;
+}
+.form-check {
+    align-items: $align-check;
+}
+.text-area {
+    margin-top: $margin-area;
+    width: $width-area;
+}
+.form-btn {
+    margin-top: $margin-form-btn;
+}
+.gap1 {
+    gap: $gap-form;
 }

@@ -17,11 +17,13 @@ $color-neutral-5: darken($color-neutral-4, 7%);
 $color-neutral-6: rgb(247, 247, 247);
 $colorLess: $color-neutral-4;
 $colorHover: $color-neutral-1;
+$color-block: #f1f1f1;
+$display-color-block: inline-block;
 
 //----------------------------
 //COLOR DIMENSION
 //----------------------------
-$color-block-dim: 120px;
+$color-block-dim: 90px;
 
 //----------------------------
 //COLORS BLOCKS
@@ -29,8 +31,8 @@ $color-block-dim: 120px;
 .color-block {
     width: $color-block-dim;
     height: $color-block-dim;
-    display: inline-block;
-    color: #f1f1f1;
+    display: $display-color-block;
+    color: $color-block;
 
     &.color-neutral-1 {
         background: $color-neutral-1;

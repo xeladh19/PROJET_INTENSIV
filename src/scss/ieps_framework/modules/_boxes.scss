@@ -8,16 +8,15 @@
 //BOUCLE DES MEDIAS QUERIES
 @use "sass:map";
 
-// @each $size, $values in $screen-sizes {
-//     @media screen and (min-width: map-get($values, 'breakpoint')) {
-//         .container {
-//             width: 100%;
-//             max-width: map-get($values, 'container-size');
-//             margin: auto;
-//         }
-//     }
-// }
-$gridValues: (('', 0, auto), ('-sm', 576px, 540px), ('-md', 768px, 720px), ('-lg', 992px, 960px), ('-xl', 1200px, 1140px), ('-xxl', 1400px, 1320px));
+@each $size, $values in $screen-sizes {
+    @media screen and (min-width: map-get($values, 'breakpoint')) {
+        .container {
+            width: 100%;
+            max-width: map-get($values, 'container-size');
+            margin: auto;
+        }
+    }
+}
 
 //-------------------------------
 //CONTENT ALIGNMENTS
@@ -51,21 +50,10 @@ $gridValues: (('', 0, auto), ('-sm', 576px, 540px), ('-md', 768px, 720px), ('-lg
     float: right;
 }
 
-//-------------------------------
-//BOX SPECIFICATIONS
-//-------------------------------
-.box {
-    font-weight: 200;
-    border: 2px solid $color-neutral-5;
-    padding: 1rem;
-    line-height: 2rem;
-}
-
 // -------------------------------------------------------------------
 // DISPLAY
 // -------------------------------------------------------------------
 
-/* Valeurs de type <display-outside> */
 .display {
     &.-block {
         display: block;
@@ -73,18 +61,18 @@ $gridValues: (('', 0, auto), ('-sm', 576px, 540px), ('-md', 768px, 720px), ('-lg
     &.-inline {
         display: inline;
     }
-    /* Valeurs de type <display-inside> */
+
     &.-flex {
         display: flex;
     }
     &.-grid {
         display: grid;
     }
-    /* Valeurs de type <display-box> */
+
     &.-none {
         display: none;
     }
-    /* Valeurs de type <display-legacy> */
+
     &.-inline-block {
         display: inline-block;
     }
