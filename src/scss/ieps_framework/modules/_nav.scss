@@ -1,7 +1,5 @@
-/*
-  ./src/scss/ieps_framework/modules/_nav.scss
-  Module du nav
- */
+// ./src/scss/ieps_framework/modules/_nav.scss
+// Module du nav
 
 //----------------------------
 //NAV VARIABLES
@@ -127,46 +125,47 @@ nav,
     }
 }
 
-// .menu {
-//     display: $display-menu;
-//     position: $position-menu;
-//     top: $top-menu;
-//     right: $right-menu;
-//     color: $colorLess;
-//     line-height: $line-height-menu;
-//     align-items: center;
+.menu {
+    display: $display-menu;
+    position: $position-menu;
+    top: $top-menu;
+    right: $right-menu;
+    color: $colorLess;
+    line-height: $line-height-menu;
 
-// h5 {
-//     position: $position-title-menu;
-//     top: $top-title-menu;
-//     right: $right-title-menu;
-//     letter-spacing: $letter-spacing-title-menu;
-//     color: $color-neutral-4;
-// }
-// }
-
-#menu {
-    position: fixed;
-    top: 0;
-
-    right: -200px;
-    width: 200px;
-    height: 100%;
-    transition: left 900ms ease-in-out;
-
-    a {
-        color: black;
-        list-style: none;
-        text-align: right;
+    h5 {
+        position: $position-title-menu;
+        top: $top-title-menu;
+        right: $right-title-menu;
+        letter-spacing: $letter-spacing-title-menu;
+        color: $color-neutral-4;
     }
 }
-#menu:hover,
-#menu.on {
-    right: 0;
-    transition: left 300ms ease-in-out;
 
-    background: white;
-}
-#menu li {
-    float: none;
-}
+//TEST MENU EN JS
+
+// #menu {
+//     position: fixed;
+//     top: 0;
+
+//     right: -200px;
+//     width: 200px;
+//     height: 100%;
+//     transition: left 900ms ease-in-out;
+
+//     a {
+//         color: black;
+//         list-style: none;
+//         text-align: right;
+//     }
+// }
+// #menu:hover,
+// #menu.on {
+//     right: 0;
+//     transition: left 300ms ease-in-out;
+
+//     background: white;
+// }
+// #menu li {
+//     float: none;
+// }

@@ -1,7 +1,5 @@
-/*
-  ./src/scss/ieps_framework/modules/_buttons.scss
-  Module des buttons
- */
+//  ./src/scss/ieps_framework/modules/_buttons.scss
+//  Module des buttons
 
 //----------------------------
 //BUTTONS VARIABLES
@@ -101,8 +99,6 @@ button,
         font-size: $font-size-fs-btn;
         text-align: $text-btn-fit;
         padding: $padding-btn-fit-small;
-    }
-    &.icon {
     }
     &.less {
         background: $background-btn-less;

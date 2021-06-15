@@ -1,24 +1,8 @@
-/*
-  ./src/scss/app.scss
-
- */
-/*
-  ./src/scss/ieps_framework/index.scss
-
- */
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
-/*
-  ./src/scss/ieps_framework/modules/_init.scss
-  Module du init
- */
 * {
   box-sizing: border-box;
 }
 
-/*
-  ./src/scss/ieps_framework/modules/_grid.scss
-  Module du grid
- */
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -3394,10 +3378,6 @@
     grid-column: 12/span 12;
   }
 }
-/*
-  ./src/scss/ieps_framework/modules/_colors.scss
-  Module des colors 
- */
 .color-block {
   width: 90px;
   height: 90px;
@@ -3423,10 +3403,6 @@
   line-height: 90px;
 }
 
-/*
-  ./src/scss/ieps_framework/modules/_typography.scss
-  Module des typos
- */
 body {
   font-family: "Merriweather", Georgia, serif;
   font-size: 0.8rem;
@@ -3552,17 +3528,12 @@ h6,
 pre {
   padding: 1rem;
   font-size: 0.7rem;
-  font-weight: 150;
   border: 2px solid #f6f6f6;
   color: #212931;
   background: #f6f6f6;
   overflow: hidden;
 }
 
-/*
-  ./src/scss/ieps_framework/modules/_card.scss
-  Module des formulaires
- */
 .card {
   display: block;
   text-align: center;
@@ -3589,11 +3560,6 @@ pre {
 }
 .card p {
   line-height: 2rem;
-}
-@media screen and (max-width: 576px) {
-  .card {
-    padding: 0;
-  }
 }
 .card .card-title {
   letter-spacing: 0.2rem;
@@ -3682,10 +3648,6 @@ pre {
   margin-bottom: 2rem;
 }
 
-/*
-  ./src/scss/ieps_framework/modules/_subtitles.scss
-  Module des subtitles
- */
 .title-sub1 {
   font-size: 1.75rem;
 }
@@ -3720,10 +3682,6 @@ pre {
   line-height: 2rem;
 }
 
-/*
-  ./src/scss/ieps_framework/modules/_nav.scss
-  Module du nav
- */
 .ul-nav {
   display: flex;
   list-style: none;
@@ -3829,35 +3787,22 @@ nav .nav-link.isActive,
     display: none;
   }
 }
-#menu {
+.menu {
+  display: flex;
   position: fixed;
-  top: 0;
-  right: -200px;
-  width: 200px;
-  height: 100%;
-  transition: left 900ms ease-in-out;
+  top: 1rem;
+  right: 4rem;
+  color: white;
+  line-height: none;
 }
-#menu a {
-  color: black;
-  list-style: none;
-  text-align: right;
-}
-
-#menu:hover,
-#menu.on {
-  right: 0;
-  transition: left 300ms ease-in-out;
-  background: white;
+.menu h5 {
+  position: fixed;
+  top: 1.2rem;
+  right: 1rem;
+  letter-spacing: 0.1rem;
+  color: white;
 }
 
-#menu li {
-  float: none;
-}
-
-/*
-  ./src/scss/ieps_framework/modules/_boxes.scss
-  Module des boxes
- */
 @media screen and (min-width: 0) {
   .container {
     width: 100%;
@@ -3949,10 +3894,6 @@ nav .nav-link.isActive,
   justify-content: space-evenly;
 }
 
-/*
-  ./src/scss/ieps_framework/modules/_lists.scss
-  Module des lists
- */
 .definition {
   list-style: none;
   padding: 0;
@@ -4017,10 +3958,6 @@ nav .nav-link.isActive,
   border-color: #18bfef;
 }
 
-/*
-  ./src/scss/ieps_framework/modules/_blockquote.scss
-  Module du blockquote
- */
 blockquote,
 .blockquote {
   font-style: italic;
@@ -4029,10 +3966,6 @@ blockquote,
   border-left: solid 3px #ededed;
 }
 
-/*
-  ./src/scss/ieps_framework/modules/_tables.scss
-  Module des tables 
- */
 table {
   border-spacing: 0;
   margin: 1rem 0 3rem 0;
@@ -4093,10 +4026,6 @@ tfoot td {
   padding-left: 0.5rem;
 }
 
-/*
-  ./src/scss/ieps_framework/modules/_buttons.scss
-  Module des buttons
- */
 button,
 .btn {
   display: inline-block;
@@ -4155,10 +4084,6 @@ button.opacity,
   opacity: 0.2;
 }
 
-/*
-  ./src/scss/ieps_framework/modules/_forms.scss
-  Module des formulaires
- */
 .box {
   width: 100%;
   padding: 0.7rem;
